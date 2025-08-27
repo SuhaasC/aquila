@@ -504,7 +504,7 @@ export default function DataManagement() {
             <FadeIn delay={0.2}>
               <Button 
                 size="lg"
-                className="w-full sm:w-auto bg-brand-gold hover:bg-brand-gold/90 text-brand-navy px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-brand-gold/25 transition-all duration-300 hover:-translate-y-1"
+                className="w-full sm:w-auto bg-brand-gold hover:bg-brand-gold/90 text-brand-navy px-8 sm:px-12 py-4 sm:py-5 text-base image.pngsm:text-lg md:text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-brand-gold/25 transition-all duration-300 hover:-translate-y-1"
                 onClick={() => window.location.href = '/data-contact'}
               >
                 Schedule a Private Consultation

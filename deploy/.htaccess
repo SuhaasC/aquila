@@ -46,7 +46,12 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Handle Next.js routing
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.php [QSA,L]
+RewriteRule ^(.*)$ /index.html [QSA,L]
 
 # Set default index
-DirectoryIndex index.php index.html
+DirectoryIndex index.html index.php
+
+# Enable CORS for Next.js
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"
