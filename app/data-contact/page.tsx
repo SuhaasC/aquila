@@ -37,14 +37,14 @@ export default function DataContact() {
           <div className="relative z-10 w-full text-center max-w-4xl mx-auto px-4 sm:px-6">
             <FadeIn>
               <h1 className="mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight leading-tight text-white">
-                Let's Discuss Your
+                Let&apos;s Discuss Your
                 <span className="block text-brand-gold mt-2 sm:mt-3">Data Challenges</span>
               </h1>
             </FadeIn>
             
             <FadeIn delay={0.1}>
               <p className="mb-8 sm:mb-12 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed px-4">
-                Ready to transform your data operations? Share your requirements and we'll schedule a focused consultation.
+                Ready to transform your data operations? Share your requirements and we&apos;ll schedule a focused consultation.
               </p>
             </FadeIn>
           </div>
@@ -59,7 +59,7 @@ export default function DataContact() {
                   Data Management Consultation
                 </h2>
                 <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-                  Tell us about your data needs and we'll arrange a private conversation to explore solutions.
+                  Tell us about your data needs and we&apos;ll arrange a private conversation to explore solutions.
                 </p>
               </div>
             </FadeIn>
@@ -283,7 +283,7 @@ export default function DataContact() {
                   <div className="text-center">
                     <CheckCircle className="w-12 h-12 text-brand-gold mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-brand-navy mb-2">Response Time</h3>
-                    <p className="text-sm text-slate-600">We'll respond within 24 hours to schedule your consultation.</p>
+                    <p className="text-sm text-slate-600">We&apos;ll respond within 24 hours to schedule your consultation.</p>
                   </div>
                 </Card>
               </div>

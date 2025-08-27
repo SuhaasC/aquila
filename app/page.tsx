@@ -143,7 +143,7 @@ export default function Home() {
                     Noise increases. Signals blur. Execution slows.
                   </p>
                   <p className="text-brand-gold font-semibold max-w-2xl">
-                    What's needed isn't more input — but sharper perspective.
+                    What&apos;s needed isn&apos;t more input — but sharper perspective.
                   </p>
                   <div className="space-y-3">
                     <p className="text-white/80 max-w-2xl">
@@ -227,7 +227,7 @@ export default function Home() {
                       </div>
                       
                       <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink">
-                        A focused, confidential session to uncover what's really holding the business back.
+                        A focused, confidential session to uncover what&apos;s really holding the business back.
                       </p>
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
@@ -311,7 +311,7 @@ export default function Home() {
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
                         <p>
-                          This is for companies that aren't short on ambition — but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
+                          This is for companies that aren&apos;t short on ambition — but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
                         </p>
                         <p>
                           Over 6–8 weeks, we work closely with your leadership team to reset the core architecture of growth.
@@ -485,11 +485,11 @@ export default function Home() {
             <FadeIn delay={0.05}>
               <div className="grid md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto">
                 {[
-                                          "Growth has slowed, but the underlying cause isn't obvious.",
+                                          "Growth has slowed, but the underlying cause isn&apos;t obvious.",
                   "Strategic decisions are piling up, with no clear way forward.",
                   "The team is executing, but direction feels scattered.",
                   "Complexity is building — and starting to cost time, focus, and opportunity.",
-                                          "You've outgrown past strategies, but haven't replaced them with better ones.",
+                                          "You&apos;ve outgrown past strategies, but haven&apos;t replaced them with better ones.",
                   "External pressures are mounting, requiring strategic clarity."
                 ].map((item, index) => (
                   <div key={index} className="flex gap-3 items-start">
@@ -576,14 +576,14 @@ export default function Home() {
           
           <FadeIn delay={0.1}>
             <div className="py-20">
-              <div className='max-w-3xl mx-auto text-center space-y-6'>
-                <img src='/founder.png' alt='Suhaas, Founder of Aquilastrat' className='w-28 h-28 mx-auto rounded-full grayscale hover:grayscale-0 transition' />
-                <blockquote className='text-2xl md:text-3xl font-serif text-slate-200'>
+              <div className="max-w-3xl mx-auto text-center space-y-6">
+                <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-28 h-28 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
+                <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
                   &ldquo;Strategy isn&apos;t about adding more — it&apos;s about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
                 </blockquote>
-                                  <div className='space-y-2'>
-                    <p className='text-sm text-slate-400'>Suhaas Chittapurath</p>
-                    <p className='text-sm text-slate-400'>Founder, Aquilastrat</p>
+                                  <div className="space-y-2">
+                    <p className="text-sm text-slate-400">Suhaas Chittapurath</p>
+                    <p className="text-sm text-slate-400">Founder, Aquilastrat</p>
                   </div>
               </div>
             </div>
