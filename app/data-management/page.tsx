@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Section } from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
-import { ArrowRight, Calendar, CheckCircle, Shield, Zap, TrendingUp, BarChart3, Database, FileText, Clock, AlertTriangle, Target } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, Shield, Zap, TrendingUp, BarChart3, Database, Clock, AlertTriangle, Target } from "lucide-react";
 import Image from "next/image";
 
 export default function DataManagement() {
@@ -497,7 +497,7 @@ export default function DataManagement() {
             
             <FadeIn delay={0.1}>
               <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
-                Whether it's regulatory reporting, market data integration, or claims optimisation — the first step is a structured conversation. We'll cut through the complexity and define a clear path forward.
+                Whether it&apos;s regulatory reporting, market data integration, or claims optimisation — the first step is a structured conversation. We&apos;ll cut through the complexity and define a clear path forward.
               </p>
             </FadeIn>
             
