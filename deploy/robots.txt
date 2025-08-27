@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.aquilastrat.com
+
+# Sitemaps
+Sitemap: https://www.aquilastrat.com/sitemap.xml
