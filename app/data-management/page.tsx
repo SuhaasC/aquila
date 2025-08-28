@@ -113,7 +113,7 @@ export default function DataManagement() {
                   The Data Challenge
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-4">
-                  Insurance and capital markets firms face the same complex frameworks as global institutions — Solvency II, IFRS 17, MiFID II, Basel III. Data arrives from multiple partners, brokers, and vendors in inconsistent formats such as EDI and CSV.
+                  Insurance and capital markets firms face the same complex frameworks as global institutions: Solvency II, IFRS 17, MiFID II, Basel III. Data arrives from multiple partners, brokers, and vendors in inconsistent formats such as EDI and CSV.
                 </p>
               </div>
             </FadeIn>
@@ -378,7 +378,7 @@ export default function DataManagement() {
                   Proof & Results
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-4xl mx-auto leading-relaxed px-4">
-                  Experience that delivers clarity. Our approach is designed to deliver measurable clarity quickly — reducing errors, reconciling fragmented feeds, and strengthening compliance confidence.
+                  Experience that delivers clarity. Our approach is designed to deliver measurable clarity quickly, reducing errors, reconciling fragmented feeds, and strengthening compliance confidence.
                 </p>
               </div>
             </FadeIn>
@@ -497,7 +497,7 @@ export default function DataManagement() {
             
             <FadeIn delay={0.1}>
               <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
-                Whether it&apos;s regulatory reporting, market data integration, or claims optimisation — the first step is a structured conversation. We&apos;ll cut through the complexity and define a clear path forward.
+                Whether it&apos;s regulatory reporting, market data integration, or claims optimisation, the first step is a structured conversation. We&apos;ll cut through the complexity and define a clear path forward.
               </p>
             </FadeIn>
             

@@ -143,7 +143,7 @@ export default function Home() {
                     Noise increases. Signals blur. Execution slows.
                   </p>
                   <p className="text-brand-gold font-semibold max-w-2xl">
-                    What&apos;s needed isn&apos;t more input — but sharper perspective.
+                    What&apos;s needed isn&apos;t more input, but sharper perspective.
                   </p>
                   <div className="space-y-3">
                     <p className="text-white/80 max-w-2xl">
@@ -232,7 +232,7 @@ export default function Home() {
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
                         <p>
-                          This engagement is designed for founders facing uncertainty — when growth slows, complexity builds, or key decisions feel delayed.
+                          This engagement is designed for founders facing uncertainty when growth slows, complexity builds, or key decisions feel delayed.
                         </p>
                         <p>
                           In a single, sharply facilitated session, we isolate the most critical constraint within your growth model.
@@ -311,7 +311,7 @@ export default function Home() {
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
                         <p>
-                          This is for companies that aren&apos;t short on ambition — but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
+                          This is for companies that aren&apos;t short on ambition - but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
                         </p>
                         <p>
                           Over 6–8 weeks, we work closely with your leadership team to reset the core architecture of growth.
@@ -363,7 +363,7 @@ export default function Home() {
                           For leadership teams navigating change, risk, or sustained growth, this retainer provides ongoing access to high-trust counsel and intelligence.
                         </p>
                         <p>
-                          We act as a quiet partner — available to think alongside you, challenge assumptions, and surface unseen opportunities or threats.
+                          We act as a quiet partner - available to think alongside you, challenge assumptions, and surface unseen opportunities or threats.
                         </p>
                       </div>
 
@@ -477,7 +477,7 @@ export default function Home() {
                   When to Engage
                 </h3>
                 <p className="max-w-3xl mx-auto text-brand-ink">
-                  This work is most valuable when something important is at stake — and clarity feels just out of reach.
+                  This work is most valuable when something important is at stake - and clarity feels just out of reach.
                 </p>
               </div>
             </FadeIn>
@@ -488,7 +488,7 @@ export default function Home() {
                                           "Growth has slowed, but the underlying cause isn&apos;t obvious.",
                   "Strategic decisions are piling up, with no clear way forward.",
                   "The team is executing, but direction feels scattered.",
-                  "Complexity is building — and starting to cost time, focus, and opportunity.",
+                  "Complexity is building - and starting to cost time, focus, and opportunity.",
                                           "You&apos;ve outgrown past strategies, but haven&apos;t replaced them with better ones.",
                   "External pressures are mounting, requiring strategic clarity."
                 ].map((item, index) => (
@@ -532,7 +532,7 @@ export default function Home() {
                 The process is intentionally simple.
               </p>
               <p className="text-brand-gold font-semibold mt-3 sm:mt-4 max-w-3xl mx-auto">
-                Not because strategy is easy — but because clarity demands focus.
+                Not because strategy is easy - but because clarity demands focus.
               </p>
             </div>
           </FadeIn>
@@ -579,7 +579,7 @@ export default function Home() {
               <div className="max-w-3xl mx-auto text-center space-y-6">
                 <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-28 h-28 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
                 <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
-                  &ldquo;Strategy isn&apos;t about adding more — it&apos;s about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
+                  &ldquo;Strategy isn&apos;t about adding more - it&apos;s about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
                 </blockquote>
                                   <div className="space-y-2">
                     <p className="text-sm text-slate-400">Suhaas Chittapurath</p>

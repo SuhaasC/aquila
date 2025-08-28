@@ -86,7 +86,7 @@ export default function Contact() {
             {/* Description */}
             <FadeIn delay={0.2}>
               <p className="mb-8 sm:mb-12 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed px-4">
-                Whether it&apos;s data management challenges, strategic clarity, or scaling decisions — the first step is a structured conversation.
+                Whether it&apos;s data management challenges, strategic clarity, or scaling decisions, the first step is a structured conversation.
               </p>
             </FadeIn>
             
