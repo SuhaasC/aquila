@@ -579,7 +579,7 @@ export default function Home() {
               <div className="max-w-3xl mx-auto text-center space-y-6">
                 <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-28 h-28 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
                 <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
-                  &ldquo;Strategy isn&apos;t about adding more - it&apos;s about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
+                  &ldquo;Strategy isn&apos;t about adding more — it&apos;s about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
                 </blockquote>
                                   <div className="space-y-2">
                     <p className="text-sm text-slate-400">Suhaas Chittapurath</p>
