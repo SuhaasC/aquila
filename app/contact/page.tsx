@@ -71,7 +71,7 @@ export default function Contact() {
             {/* Main Headline */}
             <FadeIn>
               <h1 className="mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white tracking-tight leading-tight">
-                <span className="text-white">Let&apos;s start a</span>
+                <span className="text-white">Let's start a</span>
                 <span className="block text-brand-gold">conversation.</span>
               </h1>
             </FadeIn>
@@ -79,14 +79,14 @@ export default function Contact() {
             {/* Sub-headline */}
             <FadeIn delay={0.1}>
               <p className="mb-6 sm:mb-8 max-w-4xl mx-auto text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed px-4">
-                Ready to transform your strategic thinking? We&apos;re here to help you navigate complexity and make better decisions.
+                Ready to transform your strategic thinking? We're here to help you navigate complexity and make better decisions.
               </p>
             </FadeIn>
             
             {/* Description */}
             <FadeIn delay={0.2}>
               <p className="mb-8 sm:mb-12 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed px-4">
-                Whether it&apos;s data management challenges, strategic clarity, or scaling decisions, the first step is a structured conversation.
+                Whether it's data management challenges, strategic clarity, or scaling decisions, the first step is a structured conversation.
               </p>
             </FadeIn>
             
@@ -118,7 +118,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
-                  Tell us about your strategic challenge. We&apos;ll respond within 24 hours with a structured approach.
+                  Tell us about your strategic challenge. We'll respond within 24 hours with a structured approach.
                 </p>
               </div>
             </FadeIn>

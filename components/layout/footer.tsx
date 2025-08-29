@@ -114,18 +114,6 @@ export function Footer() {
                   Company
                 </h3>
                 <ul className="space-y-4">
-                  {smallprint.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-white/80 hover:text-brand-gold transition-all duration-300 text-base font-medium group"
-                      >
-                        <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                          {item.name}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
                   <li>
                     <Link
                       href={social[0].href}
@@ -150,9 +138,26 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-white/60 font-medium">
-              © {new Date().getFullYear()} Aquilastrat. All rights reserved.
-            </p>
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+              <p className="text-sm text-white/60 font-medium">
+                © {new Date().getFullYear()} Aquilastrat. All rights reserved.
+              </p>
+              <div className="flex items-center space-x-4">
+                <Link
+                  href="/privacy"
+                  className="text-sm text-white/60 hover:text-brand-gold transition-colors"
+                >
+                  Privacy
+                </Link>
+                <span className="text-white/40">•</span>
+                <Link
+                  href="/terms"
+                  className="text-sm text-white/60 hover:text-brand-gold transition-colors"
+                >
+                  Terms
+                </Link>
+              </div>
+            </div>
             <div className="flex items-center space-x-6">
               <div className="w-2 h-2 bg-brand-gold rounded-full"></div>
               <span className="text-sm text-white/60">Understated strategy for founders</span>

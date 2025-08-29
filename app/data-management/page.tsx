@@ -497,7 +497,7 @@ export default function DataManagement() {
             
             <FadeIn delay={0.1}>
               <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
-                Whether it&apos;s regulatory reporting, market data integration, or claims optimisation, the first step is a structured conversation. We&apos;ll cut through the complexity and define a clear path forward.
+                Whether it's regulatory reporting, market data integration, or claims optimisation, the first step is a structured conversation. We'll cut through the complexity and define a clear path forward.
               </p>
             </FadeIn>
             

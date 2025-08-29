@@ -68,7 +68,7 @@ export default function Home() {
 
             {/* Main Headline - Enhanced */}
             <div>
-              <h1 className="mb-6 sm:mb-8 max-w-3xl mx-auto text-brand-navy">
+              <h1 className="mb-4 sm:mb-6 max-w-3xl mx-auto text-brand-navy">
                 The Strategy
                 <span className="block text-brand-gold mt-2 sm:mt-3 bg-gradient-to-r from-brand-gold to-brand-gold/80 bg-clip-text text-transparent">Partner</span>
               </h1>
@@ -76,21 +76,21 @@ export default function Home() {
             
             {/* Sub-headline */}
             <div>
-              <p className="mb-6 sm:mb-8 max-w-3xl mx-auto font-serif text-brand-ink">
+              <p className="mb-4 sm:mb-6 max-w-3xl mx-auto font-serif text-brand-ink">
                 For decisions that define the next chapter.
               </p>
             </div>
             
             {/* Description */}
             <div>
-              <p className="mb-12 sm:mb-16 max-w-2xl mx-auto text-brand-ink">
+              <p className="mb-8 sm:mb-12 max-w-2xl mx-auto text-brand-ink">
                 Trusted by founders navigating complexity, scale, and pivotal choices.
               </p>
             </div>
             
             {/* Tagline - Enhanced */}
             <div>
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-16 sm:mb-20">
+                              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-8 sm:mb-12">
                 <div className="flex items-center gap-3 text-brand-gold font-serif">
                   <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></div>
                   <span>Quietly engaged</span>
@@ -106,11 +106,11 @@ export default function Home() {
             <div>
               <div className="relative">
                 <Button 
-                  className="inline-flex items-center rounded-xl border border-brand-gold bg-white px-6 py-3 text-brand-navy font-medium transition hover:bg-brand-navy hover:text-brand-gold focus:ring-2 focus:ring-brand-gold/40"
+                  className="inline-flex items-center rounded-xl border border-brand-gold bg-white px-8 py-4 text-brand-navy font-medium text-lg transition hover:bg-brand-navy hover:text-brand-gold focus:ring-2 focus:ring-brand-gold/40"
                   onClick={() => window.location.href = '/consulting-contact'}
                 >
                   Request a Private Conversation
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-3 sm:ml-4" />
+                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-3 sm:ml-4" />
                 </Button>
               </div>
             </div>
@@ -143,11 +143,11 @@ export default function Home() {
                     Noise increases. Signals blur. Execution slows.
                   </p>
                   <p className="text-brand-gold font-semibold max-w-2xl">
-                    What&apos;s needed isn&apos;t more input, but sharper perspective.
+                    What's needed isn't more input, but sharper perspective.
                   </p>
                   <div className="space-y-3">
                     <p className="text-white/80 max-w-2xl">
-                      we work with a small number of founders and executives to isolate the problems that matter, and act on them with precision.
+                      We work with a small number of founders and executives to isolate the problems that matter, and act on them with precision.
                     </p>
                   </div>
                 </div>
@@ -200,8 +200,8 @@ export default function Home() {
         <Section className="bg-slate-50 relative overflow-hidden" id="services-section">
           {/* Section Header */}
           <FadeIn>
-            <div className="text-center mb-20 sm:mb-24">
-              <h2 className="text-brand-navy mb-6 sm:mb-8 max-w-3xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-brand-navy mb-4 sm:mb-6 max-w-3xl mx-auto">
                 Ways to Work Together
               </h2>
               <p className="max-w-3xl mx-auto text-brand-ink">
@@ -227,7 +227,7 @@ export default function Home() {
                       </div>
                       
                       <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink">
-                        A focused, confidential session to uncover what&apos;s really holding the business back.
+                        A focused, confidential session to uncover what's really holding the business back.
                       </p>
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
@@ -242,15 +242,15 @@ export default function Home() {
                       <div className="mt-6 pt-6 border-t border-slate-200/60">
                         <ul className="space-y-2 text-brand-ink">
                           <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0"></div>
                             <span>Identify core growth constraints</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0"></div>
                             <span>Surface 2-3 actionable shifts</span>
                           </li>
                           <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0"></div>
                             <span>Save weeks of second-guessing</span>
                           </li>
                         </ul>
@@ -311,10 +311,10 @@ export default function Home() {
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
                         <p>
-                          This is for companies that aren&apos;t short on ambition - but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
+                          This is for companies that aren't short on ambition — but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
                         </p>
                         <p>
-                          Over 6–8 weeks, we work closely with your leadership team to reset the core architecture of growth.
+                          Over 6—8 weeks, we work closely with your leadership team to reset the core architecture of growth.
                         </p>
                       </div>
 
@@ -470,7 +470,7 @@ export default function Home() {
           </FadeIn>
 
           {/* When to Engage Section */}
-          <div className="mt-24 sm:mt-28 bg-brand-navy/5 rounded-lg sm:rounded-xl p-10 sm:p-14 border border-brand-navy/10">
+          <div className="mt-16 sm:mt-20 bg-brand-navy/5 rounded-lg sm:rounded-xl p-10 sm:p-14 border border-brand-navy/10">
             <FadeIn>
               <div className="text-center mb-12 sm:mb-16">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-navy mb-4 sm:mb-6 max-w-3xl mx-auto">
@@ -485,11 +485,11 @@ export default function Home() {
             <FadeIn delay={0.05}>
               <div className="grid md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto">
                 {[
-                                          "Growth has slowed, but the underlying cause isn&apos;t obvious.",
+                                          "Growth has slowed, but the underlying cause isn't obvious.",
                   "Strategic decisions are piling up, with no clear way forward.",
                   "The team is executing, but direction feels scattered.",
                   "Complexity is building - and starting to cost time, focus, and opportunity.",
-                                          "You&apos;ve outgrown past strategies, but haven&apos;t replaced them with better ones.",
+                                          "You've outgrown past strategies, but haven't replaced them with better ones.",
                   "External pressures are mounting, requiring strategic clarity."
                 ].map((item, index) => (
                   <div key={index} className="flex gap-3 items-start">
@@ -579,7 +579,7 @@ export default function Home() {
               <div className="max-w-3xl mx-auto text-center space-y-6">
                 <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-28 h-28 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
                 <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
-                  &ldquo;Strategy isn&apos;t about adding more — it&apos;s about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
+                  &ldquo;Strategy isn't about adding more — it's about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
                 </blockquote>
                                   <div className="space-y-2">
                     <p className="text-sm text-slate-400">Suhaas Chittapurath</p>
@@ -602,10 +602,10 @@ export default function Home() {
             <FadeIn delay={0.05}>
               <div className="space-y-4 sm:space-y-5 mb-10 sm:mb-12 max-w-3xl mx-auto">
                 <p className="text-brand-ink">
-                  Most leaders don&apos;t need more advice. They need a space to think with someone who sees the signal through the noise.
+                  Most leaders don't need more advice. They need a space to think with someone who sees the signal through the noise.
                 </p>
                 <p className="text-brand-ink">
-                  If that&apos;s what you&apos;re looking for, the door is open.
+                  If that's what you're looking for, the door is open.
                 </p>
               </div>
             </FadeIn>

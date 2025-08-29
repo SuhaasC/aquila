@@ -8,7 +8,7 @@ const blogPosts = [
     slug: "strategic-clarity",
     title: "Strategic Clarity: The Foundation of Growth",
     excerpt: "How to identify and focus on the problems that actually matter.",
-    content: "Strategic clarity isn&apos;t about having all the answers, it&apos;s about knowing which questions to ask. In today&apos;s complex business environment, founders and executives face an overwhelming number of decisions, opportunities, and challenges. The key to success isn&apos;t doing more; it&apos;s doing the right things with precision and focus...",
+    content: "Strategic clarity isn't about having all the answers, it's about knowing which questions to ask. In today's complex business environment, founders and executives face an overwhelming number of decisions, opportunities, and challenges. The key to success isn't doing more; it's doing the right things with precision and focus...",
     date: "2024-08-27",
     readTime: "5 min read"
   },
@@ -16,7 +16,7 @@ const blogPosts = [
     slug: "data-driven-decisions",
     title: "Data-Driven Decisions: Beyond the Numbers",
     excerpt: "Making strategic decisions that combine data insights with human judgment.",
-    content: "Data is everywhere, but insight is rare. The difference between a company that uses data effectively and one that drowns in it often comes down to how they translate information into action. True data-driven decision making isn&apos;t about replacing human judgment, it&apos;s about enhancing it...",
+    content: "Data is everywhere, but insight is rare. The difference between a company that uses data effectively and one that drowns in it often comes down to how they translate information into action. True data-driven decision making isn't about replacing human judgment, it's about enhancing it...",
     date: "2024-08-26",
     readTime: "4 min read"
   }
@@ -39,7 +39,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <PageTransition>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
             <h1 className="text-3xl font-serif text-brand-navy mb-4">Post Not Found</h1>
-            <p className="text-slate-600">The blog post you&apos;re looking for doesn&apos;t exist.</p>
+            <p className="text-slate-600">The blog post you're looking for doesn't exist.</p>
           </div>
         </PageTransition>
         <Footer />
