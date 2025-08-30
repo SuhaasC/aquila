@@ -49,9 +49,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
                   {post.title}
                 </h1>
-                <p className="text-lg sm:text-xl text-slate-200 leading-relaxed max-w-2xl">
-                  {post.excerpt}
-                </p>
                 <div className="flex items-center gap-6 text-sm text-slate-300">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
