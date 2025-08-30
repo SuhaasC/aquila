@@ -131,7 +131,7 @@ export default function DataManagement() {
                       </div>
                       <h3 className="text-xl sm:text-2xl font-semibold text-slate-800">The Problem</h3>
                     </div>
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-3 flex-grow">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-5">
                       Without structured processes, teams spend weeks reconciling spreadsheets, checking discrepancies, and piecing together audit trails. The consequence is not just inefficiency.
                     </p>
                     <div className="mt-auto">
@@ -178,7 +178,7 @@ export default function DataManagement() {
                     </div>
                   </div>
                   
-                  <div className="bg-slate-50 rounded-2xl p-4 sm:p-6 border border-slate-200">
+                  <div className="bg-slate-50 rounded-2xl p-4 sm:p-6">
                     <div className="flex items-center gap-3 mb-3">
                       <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-slate-600" />
                       <span className="text-sm sm:text-base font-semibold text-slate-800">Time to Resolution</span>
@@ -223,7 +223,7 @@ export default function DataManagement() {
                       <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-brand-navy" />
                       <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-navy uppercase">Regulatory Excellence</span>
                     </div>
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-6 sm:mb-8 tracking-tight leading-tight">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-6 sm:mb-8 tracking-tight leading-relaxed">
                       Regulatory Data Command Centre
                     </h3>
                     <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed mb-8 sm:mb-10">
@@ -243,13 +243,13 @@ export default function DataManagement() {
                     </div>
                   </div>
                   <div className="relative">
-                    <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-slate-200 mb-6 sm:mb-8">
+                    <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden mb-6 sm:mb-8">
                       <Image 
                         src="/regulatory.jpg" 
                         alt="Regulatory data command centre and compliance systems" 
                         width={800}
                         height={400}
-                        className="w-full h-full object-cover sm:object-contain"
+                        className="w-full h-full object-contain"
                         loading="lazy"
                       />
                     </div>
@@ -293,13 +293,13 @@ export default function DataManagement() {
                     </div>
                   </div>
                   <div className="lg:order-1 relative">
-                    <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-slate-200 mb-6 sm:mb-8">
+                    <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden mb-6 sm:mb-8">
                       <Image 
                         src="/data-int.jpg" 
                         alt="Market and risk data integration layer" 
                         width={800}
                         height={400}
-                        className="w-full h-full object-cover sm:object-contain"
+                        className="w-full h-full object-contain"
                         loading="lazy"
                       />
                     </div>
@@ -343,13 +343,13 @@ export default function DataManagement() {
                     </div>
                   </div>
                   <div className="relative">
-                    <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-slate-200 mb-6 sm:mb-8">
+                    <div className="w-full h-96 sm:h-[28rem] rounded-3xl overflow-hidden mb-6 sm:mb-8">
                       <Image 
                         src="/claims.jpg" 
                         alt="Claims process optimisation and workflow automation" 
                         width={800}
                         height={400}
-                        className="w-full h-full object-cover sm:object-contain"
+                        className="w-full h-full object-contain"
                         loading="lazy"
                       />
                     </div>
@@ -384,11 +384,11 @@ export default function DataManagement() {
             </FadeIn>
 
             {/* Impact Story */}
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-12 items-stretch">
               {/* Left Side - Story */}
               <FadeIn delay={0.1}>
-                <div className="space-y-6">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 h-full">
+                <div className="flex flex-col h-full space-y-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 flex-1">
                     <div className="flex items-center gap-4 mb-4 sm:mb-6">
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-brand-gold/20 rounded-full flex items-center justify-center">
                         <Target className="w-6 h-6 sm:w-8 sm:h-8 text-brand-gold" />
@@ -403,7 +403,7 @@ export default function DataManagement() {
                     </p>
                   </div>
                   
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 h-full">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/20 flex-1">
                     <div className="flex items-center gap-4 mb-4 sm:mb-6">
                       <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-500/20 rounded-full flex items-center justify-center">
                         <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-400" />

@@ -110,17 +110,18 @@ export default function DataContact() {
                           name="email"
                           required
                           className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy transition-colors"
-                          placeholder="your.email@company.com"
+                          placeholder="contact@aquilastrat.com"
                         />
                       </div>
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                          Company
+                          Company *
                         </label>
                         <input
                           type="text"
                           id="company"
                           name="company"
+                          required
                           className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy transition-colors"
                           placeholder="Your company name"
                         />

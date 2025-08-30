@@ -95,9 +95,9 @@ export default function Privacy() {
                     <p className="text-slate-700 leading-relaxed">
                       If you have any questions about this Privacy Policy or our data practices, 
                       please contact us at{" "}
-                      <a href="mailto:suhaas@aquilastrat.com" className="text-brand-gold hover:text-brand-navy transition-colors">
-                        suhaas@aquilastrat.com
-                      </a>
+                                      <a href="mailto:contact@aquilastrat.com" className="text-brand-gold hover:text-brand-navy transition-colors">
+                  contact@aquilastrat.com
+                </a>
                     </p>
                   </div>
 

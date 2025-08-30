@@ -70,7 +70,7 @@ export default function Contact() {
           <div className="relative z-10 w-full text-center max-w-6xl mx-auto px-4 sm:px-6">
             {/* Main Headline */}
             <FadeIn>
-              <h1 className="mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white tracking-tight leading-tight">
+              <h1 className="mb-6 sm:mb-8 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white tracking-tight leading-relaxed">
                 <span className="text-white">Let's start a</span>
                 <span className="block text-brand-gold">conversation.</span>
               </h1>
@@ -114,7 +114,7 @@ export default function Contact() {
           <div className="relative z-10">
             <FadeIn>
               <div className="text-center mb-12 sm:mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-relaxed">
                   Get in Touch
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
@@ -165,12 +165,13 @@ export default function Contact() {
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-3">
-                          Company
+                          Company *
                         </label>
                         <Input
                           id="company"
                           name="company"
                           type="text"
+                          required
                           value={formData.company}
                           onChange={handleChange}
                           className="w-full border-slate-300 focus:border-brand-navy focus:ring-brand-navy/20"
@@ -189,7 +190,7 @@ export default function Contact() {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full border-slate-300 focus:border-brand-navy focus:ring-brand-navy/20"
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91945540655"
                         />
                       </div>
                     </div>
@@ -237,7 +238,7 @@ export default function Contact() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-brand-navy mb-1">Email</h4>
-                          <p className="text-slate-700">suhaas@aquilastrat.com</p>
+                          <p className="text-slate-700">contact@aquilastrat.com</p>
                           <p className="text-sm text-slate-500 mt-1">We typically respond within 24 hours</p>
                         </div>
                       </div>
@@ -248,7 +249,7 @@ export default function Contact() {
                         </div>
                         <div>
                           <h4 className="font-semibold text-brand-navy mb-1">Phone</h4>
-                          <p className="text-slate-700">+1 (555) 123-4567</p>
+                          <p className="text-slate-700">+91945540655</p>
                           <p className="text-sm text-slate-500 mt-1">Available during business hours</p>
                         </div>
                       </div>
@@ -267,29 +268,7 @@ export default function Contact() {
                   </div>
                 </FadeIn>
 
-                <FadeIn delay={0.2}>
-                  <div className="bg-gradient-to-br from-brand-gold/5 to-amber-50 p-8 rounded-3xl border border-brand-gold/10">
-                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-brand-navy mb-6">
-                      What to Expect
-                    </h3>
-                    
-                    <div className="space-y-4">
-                      {[
-                        { icon: Calendar, text: "Initial consultation within 48 hours", color: "text-brand-gold" },
-                        { icon: CheckCircle, text: "Tailored strategic approach discussion", color: "text-green-600" },
-                        { icon: CheckCircle, text: "Clear next steps and timeline", color: "text-green-600" },
-                        { icon: CheckCircle, text: "No pressure, no obligation", color: "text-green-600" }
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-center gap-4">
-                          <div className={`w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm`}>
-                            <item.icon className={`w-4 h-4 ${item.color}`} />
-                          </div>
-                          <span className="text-slate-700 font-medium">{item.text}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </FadeIn>
+
 
                 <FadeIn delay={0.25}>
                   <div className="bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl border border-slate-200">
@@ -318,7 +297,7 @@ export default function Contact() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <FadeIn>
               <div className="text-center mb-12 sm:mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-relaxed">
                   Strategic Consulting?
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -386,7 +365,7 @@ export default function Contact() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <FadeIn>
               <div className="text-center mb-12 sm:mb-16">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-relaxed">
                   Data Management Challenges?
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">

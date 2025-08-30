@@ -117,9 +117,9 @@ export default function Terms() {
                     <h2 className="text-2xl font-serif text-brand-navy mb-4">Contact Information</h2>
                     <p className="text-slate-700 leading-relaxed">
                       For questions about these Terms of Service, please contact us at{" "}
-                      <a href="mailto:suhaas@aquilastrat.com" className="text-brand-gold hover:text-brand-navy transition-colors">
-                        suhaas@aquilastrat.com
-                      </a>
+                                      <a href="mailto:contact@aquilastrat.com" className="text-brand-gold hover:text-brand-navy transition-colors">
+                  contact@aquilastrat.com
+                </a>
                     </p>
                   </div>
 

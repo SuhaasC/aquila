@@ -100,17 +100,18 @@ export default function ConsultingContact() {
                           name="email"
                           required
                           className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy transition-colors"
-                          placeholder="your.email@company.com"
+                          placeholder="contact@aquilastrat.com"
                         />
                       </div>
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                          Company
+                          Company *
                         </label>
                         <input
                           type="text"
                           id="company"
                           name="company"
+                          required
                           className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy transition-colors"
                           placeholder="Your company name"
                         />
@@ -136,25 +137,7 @@ export default function ConsultingContact() {
                       </select>
                     </div>
 
-                    {/* Strategic Consulting Specific Fields */}
-                    <div>
-                      <label htmlFor="consultingType" className="block text-sm font-medium text-slate-700 mb-2">
-                        Primary Strategic Challenge *
-                      </label>
-                      <select
-                        id="consultingType"
-                        name="consultingType"
-                        required
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-navy/20 focus:border-brand-navy transition-colors"
-                      >
-                        <option value="">Select your primary challenge</option>
-                        <option value="strategic-diagnostic">Strategic Diagnostic (90-min session)</option>
-                        <option value="growth-architecture">Growth Architecture Reset (6-8 weeks)</option>
-                        <option value="strategic-partner">Strategic Partner Retainer (ongoing)</option>
-                        <option value="growth-acceleration">Growth Acceleration</option>
-                        <option value="other">Other strategic challenge</option>
-                      </select>
-                    </div>
+
 
                     <div>
                       <label htmlFor="companyStage" className="block text-sm font-medium text-slate-700 mb-2">

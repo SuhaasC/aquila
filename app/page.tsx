@@ -26,7 +26,7 @@ export default function Home() {
       <Header />
       <PageTransition>
         {/* HERO SECTION */}
-        <Section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+        <Section className="relative flex items-center justify-center bg-white overflow-hidden">
           {/* Enhanced Background Pattern */}
           <div className="absolute inset-0">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(0,32,96,0.03)_1px,transparent_0)] bg-[size:120px_120px]"></div>
@@ -106,7 +106,7 @@ export default function Home() {
             <div>
               <div className="relative">
                 <Button 
-                  className="inline-flex items-center rounded-xl border border-brand-gold bg-white px-8 py-4 text-brand-navy font-medium text-lg transition hover:bg-brand-navy hover:text-brand-gold focus:ring-2 focus:ring-brand-gold/40"
+                  className="inline-flex text-sm sm:text-base items-center rounded-xl border border-brand-gold bg-white px-8 py-4 text-brand-navy font-medium transition hover:bg-brand-navy hover:text-brand-gold focus:ring-2 focus:ring-brand-gold/40"
                   onClick={() => window.location.href = '/consulting-contact'}
                 >
                   Request a Private Conversation
@@ -404,71 +404,6 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          {/* Growth Acceleration Section */}
-          <FadeIn delay={0.2}>
-            <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-0.5 mt-20">
-              <div className="p-8 sm:p-12 md:p-16">
-                <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
-                  <div className="order-2 lg:order-1">
-                    <div className="relative">
-                      <figure className="rounded-2xl overflow-hidden shadow-2xl">
-                        <Image 
-                          src="/growth.jpg" 
-                          alt="Business growth acceleration and scaling strategies" 
-                          width={2070}
-                          height={1553}
-                          className="w-full aspect-[4/3] object-cover"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-slate-900/10"></div>
-                      </figure>
-                    </div>
-                  </div>
-
-                  <div className="order-1 lg:order-2">
-                    <div className="mb-6 sm:mb-8">
-                      <div className="text-xs tracking-wider text-slate-500 uppercase mb-3">Accelerated scaling</div>
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3">
-                        Growth Acceleration
-                      </h3>
-                      <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold"></div>
-                    </div>
-                    
-                    <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink">
-                      Transform your growth trajectory with strategic acceleration frameworks.
-                    </p>
-                    
-                    <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                      <p>
-                        For companies ready to scale beyond current constraints, this engagement focuses on identifying and removing the bottlenecks that limit growth velocity.
-                      </p>
-                      <p>
-                        We work with your team to implement proven acceleration strategies while maintaining the quality and culture that made you successful.
-                      </p>
-                    </div>
-
-                    <div className="mt-6 pt-6 border-t border-slate-200/60">
-                      <ul className="space-y-2 text-brand-ink">
-                        <li className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Identify growth bottlenecks</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Implement scaling frameworks</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
-                          <span>Maintain quality during scale</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </FadeIn>
-
           {/* When to Engage Section */}
           <div className="mt-16 sm:mt-20 bg-brand-navy/5 rounded-lg sm:rounded-xl p-10 sm:p-14 border border-brand-navy/10">
             <FadeIn>
@@ -565,7 +500,7 @@ export default function Home() {
                     <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-white mb-4 sm:mb-6 group-hover:text-brand-gold transition-colors duration-300 max-w-3xl mx-auto">
                       {step.title}
                     </h3>
-                    <p className="text-white/70 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-white/70 leading-tight max-w-2xl mx-auto">
                       {step.description}
                     </p>
                   </div>
@@ -577,7 +512,7 @@ export default function Home() {
           <FadeIn delay={0.1}>
             <div className="py-20">
               <div className="max-w-3xl mx-auto text-center space-y-6">
-                <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-28 h-28 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
+                <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-40 h-40 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
                 <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
                   &ldquo;Strategy isn't about adding more — it's about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
                 </blockquote>
@@ -594,7 +529,7 @@ export default function Home() {
         <Section className="bg-white text-brand-navy relative overflow-hidden border-t-2 border-b-2 border-brand-gold">
           <div className="relative z-10 text-center">
             <FadeIn>
-              <h2 className="mb-6 sm:mb-8 max-w-3xl mx-auto text-brand-navy">
+              <h2 className="mb-6 sm:mb-8 max-w-3xl mx-auto text-brand-navy leading-tight">
                 An Invitation
               </h2>
               <div className="w-16 h-0.5 bg-brand-gold mx-auto mb-6 sm:mb-8"></div>
