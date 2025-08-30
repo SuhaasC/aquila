@@ -1,140 +1,103 @@
-# Aquilastrat - Strategic Partners for Leaders Who Move Markets
+# Aquilastrat - Strategic Consulting Website
 
-A sophisticated, modern website built with Next.js, showcasing strategic consulting and data management services for founders and executives.
+A clean, modern website for strategic consulting services, built with Next.js and TypeScript.
 
 ## 🚀 Features
 
-- **Strategic Consulting Services** - Strategic Diagnostic, Growth Architecture, Strategic Partner Retainer
-- **Data Management Solutions** - Regulatory compliance, market data integration, claims process optimization
-- **Modern Design** - Clean, professional aesthetic with brand-navy and brand-gold color scheme
-- **Responsive Layout** - Optimized for all devices and screen sizes
-- **Performance Optimized** - Built with Next.js 14 and optimized for speed
-- **SEO Ready** - Open Graph tags, sitemap, and meta optimization
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **Deployment**: Vercel-ready
-- **Analytics**: Google Analytics integration
+- **Clean Blog System** - Centralized content management with easy-to-edit blog posts
+- **Responsive Design** - Beautiful design that works on all devices
+- **Fast Performance** - Optimized with Next.js static generation
+- **SEO Optimized** - Built-in SEO features for better search rankings
+- **Contact Forms** - Professional contact forms for different services
 
 ## 📁 Project Structure
 
 ```
-aquila/
 ├── app/                    # Next.js app directory
-│   ├── admin/             # Admin page
-│   ├── blog/              # Blog and insights
-│   ├── contact/           # Main contact form
-│   ├── consulting-contact/ # Strategic consulting contact
-│   ├── data-contact/      # Data management contact
-│   ├── data-management/   # Data services page
-│   └── layout.tsx         # Root layout
-├── components/             # Reusable components
-│   ├── layout/            # Header, footer, site layout
-│   └── ui/                # UI components (buttons, cards, etc.)
-├── lib/                   # Utility functions and SEO
-├── public/                # Static assets and images
-└── tailwind.config.js     # Tailwind configuration
+│   ├── blog/              # Blog pages
+│   │   ├── page.tsx       # Blog listing page
+│   │   └── [slug]/        # Individual blog posts
+│   ├── contact/           # Contact pages
+│   ├── data-management/   # Data management service page
+│   └── layout.tsx        # Root layout
+├── components/            # Reusable components
+│   ├── layout/           # Header, footer, etc.
+│   └── ui/               # UI components (buttons, cards, etc.)
+├── lib/                  # Utility functions and data
+│   ├── blog-data.ts      # Blog posts data (centralized)
+│   └── seo.ts           # SEO configuration
+└── public/               # Static assets (images, favicon, etc.)
 ```
 
-## 🎨 Design System
-
-- **Primary Colors**: Brand Navy (#002060), Brand Gold (#D4AF37)
-- **Typography**: Libre Caslon Text (serif), system fonts (sans-serif)
-- **Spacing**: Consistent 4px grid system
-- **Components**: Modular, reusable design components
-
-## 🚀 Getting Started
+## 🛠️ Development
 
 ### Prerequisites
 - Node.js 18+ 
 - npm or yarn
 
-### Installation
+### Setup
 ```bash
-# Clone the repository
-git clone https://github.com/SuhaasC/aquila.git
-cd aquila
-
 # Install dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
-```
 
-### Build for Production
-```bash
+# Build for production
 npm run build
-npm start
+
+# Deploy to Vercel
+npx vercel --prod
 ```
 
-## 📱 Pages & Routes
+## 📝 Adding Blog Posts
 
-- **Home** (`/`) - Main landing page with services overview
-- **Data Management** (`/data-management`) - Data services and solutions
-- **Contact** (`/contact`) - General contact form
-- **Consulting Contact** (`/consulting-contact`) - Strategic consulting inquiries
-- **Data Contact** (`/data-contact`) - Data management inquiries
-- **Blog** (`/blog`) - Insights and thought leadership
-- **Admin** (`/admin`) - Administrative interface
+To add a new blog post:
 
-## 🔧 Configuration
+1. Open `lib/blog-data.ts`
+2. Add a new post to the `blogPosts` array
+3. Include all required fields: `slug`, `title`, `excerpt`, `category`, `readTime`, `publishDate`, `heroImage`, `content`
+4. The post will automatically appear on the blog page
 
-### Environment Variables
-Create a `.env.local` file:
-```env
-NEXT_PUBLIC_GA_ID=your_google_analytics_id
+### Blog Post Structure
+```typescript
+{
+  slug: "your-post-slug",
+  title: "Your Post Title",
+  excerpt: "Brief description of the post",
+  category: "Category Name",
+  readTime: "5 min read",
+  publishDate: "2025-01-01",
+  featured: true, // Optional: for featured posts
+  heroImage: "https://your-image-url.com",
+  tags: ["tag1", "tag2"], // Optional
+  content: `
+    <p>Your HTML content here...</p>
+    <h2>Section Title</h2>
+    <p>More content...</p>
+  `
+}
 ```
 
-### Tailwind CSS
-Custom color palette and component styles defined in `tailwind.config.js`
+## 🎨 Design System
 
-## 📊 Performance
+The website uses a consistent design system with:
 
-- **Lighthouse Score**: Optimized for 90+ performance
-- **Image Optimization**: Next.js Image component with lazy loading
-- **Code Splitting**: Automatic route-based code splitting
-- **SEO**: Meta tags, Open Graph, and structured data
+- **Colors**: Brand navy (#002060), Brand gold (#D4AF37)
+- **Typography**: Serif fonts for headings, sans-serif for body text
+- **Spacing**: Consistent spacing using Tailwind CSS
+- **Components**: Reusable UI components for consistency
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
-```bash
-npm install -g vercel
-vercel
-```
+The website is deployed on Vercel with automatic deployments from the main branch.
 
-### Other Platforms
-- Netlify
-- AWS Amplify
-- Docker deployment
+**Live URL**: https://aquila-his28jhck-suhaas-projects-1a577bf5.vercel.app
 
-## 📈 Analytics
+## 📧 Contact
 
-Google Analytics integration for tracking user behavior and performance metrics.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved by Aquilastrat.
-
-## 📞 Contact
-
-- **Website**: [aquilastrat.com](https://aquilastrat.com)
-- **Email**: suhaas@aquilastrat.com
-- **LinkedIn**: [Aquilastrat](https://linkedin.com/company/aquilastrat)
+For questions about the website or to request changes, contact: contact@aquilastrat.com
 
 ---
 
-**Aquilastrat** - Understated strategy for founders who move markets.
+Built with ❤️ using Next.js, TypeScript, and Tailwind CSS
