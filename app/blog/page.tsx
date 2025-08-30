@@ -515,7 +515,7 @@ export default function BlogPage() {
                   {categories.map((category) => (
                     <Button
                       key={category}
-                      variant={selectedCategory === category ? "default" : "default" : "outline"}
+                      variant={selectedCategory === category ? "default" : "outline"}
                       onClick={() => setSelectedCategory(category)}
                       className="text-sm"
                     >
