@@ -39,14 +39,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-[size:80px_80px]"></div>
           </div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-brand-gold/10 rounded-full">
                   <span className="text-xs font-semibold tracking-wider text-brand-gold uppercase">{post.category}</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight">
                   {post.title}
                 </h1>
                 <div className="flex items-center gap-6 text-sm text-slate-300">
@@ -77,28 +77,30 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         </div>
 
         {/* Article Content */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <FadeIn>
-            <article className="prose prose-lg max-w-none 
-              prose-headings:font-serif prose-headings:text-brand-navy prose-headings:font-bold 
-              prose-h1:text-4xl prose-h1:mt-16 prose-h1:mb-8
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-brand-navy
-              prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-brand-navy
-              prose-p:text-slate-700 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6
-              prose-strong:text-brand-navy prose-strong:font-semibold
-              prose-em:text-brand-navy prose-em:font-medium
-              prose-ul:my-8 prose-ul:list-disc prose-ul:pl-6
-              prose-li:my-3 prose-li:text-slate-700 prose-li:leading-relaxed
-              prose-ol:my-8 prose-ol:list-decimal prose-ol:pl-6
-              prose-blockquote:border-l-4 prose-blockquote:border-brand-gold prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
-              prose-code:bg-slate-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
-              prose-pre:bg-slate-900 prose-pre:text-slate-100
-              prose-a:text-brand-gold prose-a:no-underline prose-a:font-semibold hover:prose-a:text-brand-navy
-              prose-img:rounded-lg prose-img:shadow-lg
-              prose-hr:border-slate-200 prose-hr:my-12
-            ">
-              <div dangerouslySetInnerHTML={{ __html: post.content }} />
-            </article>
+            <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 border border-slate-200">
+              <article className="prose prose-lg max-w-none 
+                prose-headings:font-serif prose-headings:text-brand-navy prose-headings:font-bold 
+                prose-h1:text-3xl prose-h1:mt-12 prose-h1:mb-6
+                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-5 prose-h2:text-brand-navy
+                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-brand-navy
+                prose-p:text-slate-700 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6
+                prose-strong:text-brand-navy prose-strong:font-semibold
+                prose-em:text-brand-navy prose-em:font-medium
+                prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
+                prose-li:my-2 prose-li:text-slate-700 prose-li:leading-relaxed
+                prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
+                prose-blockquote:border-l-4 prose-blockquote:border-brand-gold prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-slate-600
+                prose-code:bg-slate-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+                prose-pre:bg-slate-900 prose-pre:text-slate-100
+                prose-a:text-brand-gold prose-a:no-underline prose-a:font-semibold hover:prose-a:text-brand-navy
+                prose-img:rounded-lg prose-img:shadow-lg
+                prose-hr:border-slate-200 prose-hr:my-8
+              ">
+                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              </article>
+            </div>
           </FadeIn>
         </div>
       </PageTransition>
