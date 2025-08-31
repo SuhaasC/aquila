@@ -9,7 +9,7 @@ export interface BlogPost {
   heroImage: string;
   content: string;
   tags?: string[];
-  icon?: any;
+  icon?: React.ComponentType<{ className?: string }>;
 }
 
 export const blogPosts: BlogPost[] = [

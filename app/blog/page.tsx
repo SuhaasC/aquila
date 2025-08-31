@@ -11,10 +11,7 @@ import {
   ArrowRight, 
   Search,
   Filter,
-  TrendingUp,
-  Lightbulb,
-  Target,
-  Users
+  TrendingUp
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
