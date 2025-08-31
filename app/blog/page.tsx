@@ -10,218 +10,254 @@ import {
   Clock, 
   ArrowRight, 
   Search,
-  Filter
+  Filter,
+  TrendingUp,
+  Lightbulb,
+  Target,
+  Users
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { getAllPosts, getFeaturedPosts } from "@/lib/blog-data";
 
-export default function BlogPage() {
+const categories = ["All", "Strategy", "Data Management", "Leadership", "Innovation", "Data"];
+
+export default function Blog() {
   const allPosts = getAllPosts();
   const featuredPosts = getFeaturedPosts();
   
-  const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [showFilters, setShowFilters] = useState(false);
-
-  const categories = ["All", "Strategy", "Data Management", "Leadership", "Innovation", "Data"];
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredPosts = allPosts.filter(post => {
+    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
+    return matchesCategory && matchesSearch;
   });
 
+  const featuredPost = featuredPosts[0]; // Get the first featured post
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <Header />
       <PageTransition>
         {/* Hero Section */}
-        <div className="relative bg-gradient-to-br from-brand-navy to-slate-900 text-white overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-[size:80px_80px]"></div>
+        <section className="py-20 sm:py-24 md:py-32 bg-brand-navy text-white relative overflow-hidden">
+          <div className="relative z-10 w-full px-8 sm:px-12 md:px-16 lg:px-24 text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6 sm:mb-8 leading-tight text-brand-gold">
+              Strategic Insights
+            </h1>
+            <p className="text-xl sm:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Deep dives into strategy, leadership, and the art of making complex decisions simple.
+            </p>
           </div>
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-tight mb-6">
-                Insights & Strategy
-              </h1>
-              <p className="text-xl sm:text-2xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
-                Strategic thinking for founders and executives who move markets
-              </p>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        {/* Search and Filter Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-slate-200">
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-              {/* Search */}
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search insights..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all"
-                />
-              </div>
+        {/* Search and Filter */}
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="w-full px-8 sm:px-12 md:px-16 lg:px-24">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-6 items-center justify-between">
+                {/* Search */}
+                <div className="relative flex-1 max-w-md">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text/40" />
+                  <input
+                    type="text"
+                    placeholder="Search insights..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-text/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-navy/50 focus:border-brand-navy/50 transition-all duration-300"
+                  />
+                </div>
 
-              {/* Filter Toggle */}
-              <Button
-                variant="outline"
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2"
-              >
-                <Filter className="w-4 h-4" />
-                Filter
-              </Button>
-            </div>
-
-            {/* Filter Options */}
-            {showFilters && (
-              <div className="mt-6 pt-6 border-t border-slate-200">
-                <div className="flex flex-wrap gap-3">
-                  {categories.map((category) => (
-                    <Button
-                      key={category}
-                      variant={selectedCategory === category ? "default" : "outline"}
-                      onClick={() => setSelectedCategory(category)}
-                      className="text-sm"
-                    >
-                      {category}
-                    </Button>
-                  ))}
+                {/* Category Filter */}
+                <div className="flex items-center gap-2">
+                  <Filter className="w-5 h-5 text-text/60" />
+                  <div className="flex flex-wrap gap-2">
+                    {categories.map((category) => (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedCategory(category)}
+                        className={`px-6 py-3 rounded-full text-base font-medium transition-all duration-300 ${
+                          selectedCategory === category
+                            ? "bg-brand-navy text-white shadow-md"
+                            : "bg-slate-100 text-text/70 hover:bg-slate-200 hover:text-text/90"
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            )}
-          </div>
-        </div>
-
-        {/* Featured Posts */}
-        {featuredPosts.length > 0 && (
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-serif text-brand-navy mb-4">
-                Featured Insights
-              </h2>
-              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                Deep strategic analysis and practical guidance for scaling businesses
-              </p>
             </div>
+          </div>
+        </section>
 
-            <div className="grid lg:grid-cols-2 gap-8">
-              {featuredPosts.map((post) => (
-                <Card key={post.slug} className="group overflow-hidden hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-video overflow-hidden">
-                    <img 
-                      src={post.heroImage} 
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6 sm:p-8">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="px-3 py-1 bg-brand-gold/10 text-brand-gold text-sm font-semibold rounded-full">
-                        {post.category}
-                      </span>
-                      <div className="flex items-center gap-2 text-sm text-slate-500">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.publishDate}</span>
+        {/* Featured Post */}
+        {featuredPost && (
+          <section className="py-16 sm:py-20 bg-gradient-to-r from-primary/5 to-accent/5">
+            <div className="w-full px-8 sm:px-12 md:px-16 lg:px-24">
+              <div className="max-w-6xl mx-auto">
+                <div className="text-center mb-12">
+                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-text mb-4">
+                    Featured Insight
+                  </h2>
+                  <p className="text-text/60 max-w-2xl mx-auto">
+                    Our most popular strategic framework, trusted by hundreds of founders
+                  </p>
+                </div>
+
+                <Card className="p-8 sm:p-12 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 group">
+                  <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                    <div>
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-brand-navy/10 rounded-full flex items-center justify-center">
+                          <TrendingUp className="w-6 h-6 text-brand-navy" />
+                        </div>
+                        <span className="text-sm font-medium text-brand-navy bg-brand-navy/10 px-3 py-1 rounded-full">
+                          {featuredPost.category}
+                        </span>
                       </div>
-                    </div>
-                    <h3 className="text-xl sm:text-2xl font-serif text-brand-navy mb-3 leading-tight">
-                      {post.title}
-                    </h3>
-                    <p className="text-slate-600 mb-4 leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-slate-500">
-                        <Clock className="w-4 h-4" />
-                        <span>{post.readTime}</span>
+                      
+                      <h3 className="text-2xl sm:text-3xl font-serif font-bold text-text mb-4 group-hover:text-brand-navy transition-colors duration-300">
+                        {featuredPost.title}
+                      </h3>
+                      
+                      <p className="text-text/70 text-lg leading-relaxed mb-6">
+                        {featuredPost.excerpt}
+                      </p>
+                      
+                      <div className="flex items-center gap-6 text-sm text-text/50 mb-6">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4" />
+                          <span>{new Date(featuredPost.publishDate).toLocaleDateString('en-US', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                          })}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4" />
+                          <span>{featuredPost.readTime}</span>
+                        </div>
                       </div>
-                      <Link href={`/blog/${post.slug}`}>
-                        <Button variant="ghost" className="group-hover:text-brand-gold">
-                          Read More
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+
+                      <Link href={`/blog/${featuredPost.slug}`}>
+                        <Button className="bg-brand-navy hover:bg-brand-navy/90 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 group-hover:bg-brand-navy/80 group-hover:shadow-lg">
+                          Read Full Article
+                          <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                         </Button>
                       </Link>
                     </div>
+
+                    <div className="relative">
+                      {featuredPost.heroImage ? (
+                        <div className="w-full h-64 lg:h-80 rounded-2xl overflow-hidden">
+                          <img 
+                            src={featuredPost.heroImage} 
+                            alt={featuredPost.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-full h-64 lg:h-80 bg-gradient-to-br from-brand-navy/10 to-brand-navy/20 rounded-2xl flex items-center justify-center">
+                          <TrendingUp className="w-24 h-24 text-brand-navy/40" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </Card>
-              ))}
+              </div>
             </div>
-          </div>
+          </section>
         )}
 
         {/* All Posts */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif text-brand-navy mb-4">
-              All Insights
-            </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Browse our complete collection of strategic insights and analysis
-            </p>
-          </div>
+        <section className="py-16 sm:py-20 bg-white">
+          <div className="w-full px-8 sm:px-12 md:px-16 lg:px-24">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-2xl sm:text-3xl font-serif font-bold text-brand-gold mb-4">
+                  All Insights
+                </h2>
+                <p className="text-text/60 max-w-2xl mx-auto">
+                  Explore our complete collection of strategic insights and frameworks
+                </p>
+              </div>
 
-          {filteredPosts.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-slate-500 text-lg">No posts found matching your criteria.</p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <Card key={post.slug} className="group overflow-hidden hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-video overflow-hidden">
-                    <img 
-                      src={post.heroImage} 
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="px-2 py-1 bg-brand-gold/10 text-brand-gold text-xs font-semibold rounded-full">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPosts.filter(post => !post.featured).map((post) => (
+                  <Card key={post.slug} className="p-6 bg-white shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    {/* Hero Image */}
+                    {post.heroImage && (
+                      <div className="mb-4">
+                        <div className="aspect-[16/9] rounded-lg overflow-hidden">
+                          <img 
+                            src={post.heroImage} 
+                            alt={post.title}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    )}
+                    
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-brand-navy/10 rounded-full flex items-center justify-center">
+                        <TrendingUp className="w-5 h-5 text-brand-navy" />
+                      </div>
+                      <span className="text-sm font-medium text-brand-navy bg-brand-navy/10 px-3 py-1 rounded-full">
                         {post.category}
                       </span>
-                      <div className="flex items-center gap-1 text-xs text-slate-500">
-                        <Calendar className="w-3 h-3" />
-                        <span>{post.publishDate}</span>
-                      </div>
                     </div>
-                    <h3 className="text-lg font-serif text-brand-navy mb-2 leading-tight">
+                    
+                    <h3 className="text-xl font-serif font-bold text-text mb-3 group-hover:text-brand-navy transition-colors duration-300 line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                    
+                    <p className="text-text/70 text-sm leading-relaxed mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1 text-xs text-slate-500">
+                    
+                    <div className="flex items-center gap-4 text-xs text-text/50 mb-4">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        <span>{new Date(post.publishDate).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'short', 
+                          day: 'numeric' 
+                        })}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
                         <Clock className="w-3 h-3" />
                         <span>{post.readTime}</span>
                       </div>
-                      <Link href={`/blog/${post.slug}`}>
-                        <Button variant="ghost" size="sm" className="group-hover:text-brand-gold">
-                          Read
-                          <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                        </Button>
-                      </Link>
                     </div>
+
+                    <Link href={`/blog/${post.slug}`}>
+                      <Button variant="ghost" className="w-full text-brand-navy hover:text-brand-navy/80 hover:bg-brand-navy/5 px-4 py-3 h-auto text-base font-medium">
+                        Read More
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </Link>
+                  </Card>
+                ))}
+              </div>
+
+              {filteredPosts.length === 0 && (
+                <div className="text-center py-16">
+                  <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Search className="w-8 h-8 text-slate-400" />
                   </div>
-                </Card>
-              ))}
+                  <h3 className="text-xl font-semibold text-text mb-2">No insights found</h3>
+                  <p className="text-text/60">Try adjusting your search or filter criteria</p>
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </div>
+        </section>
       </PageTransition>
       <Footer />
     </div>
