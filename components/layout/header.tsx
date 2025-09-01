@@ -21,7 +21,7 @@ export function Header() {
         {/* Logo/Wordmark */}
         <Link href="/" className="flex items-center">
           <img 
-            src="/logo-header.png" 
+            src="/logo-header.png?v=2" 
             alt="Aquilastrat" 
             className="h-8 w-auto"
           />

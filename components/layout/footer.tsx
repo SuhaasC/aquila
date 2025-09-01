@@ -32,7 +32,7 @@ export function Footer() {
           <div className="space-y-6">
             <div className="bg-white rounded-3xl p-8 shadow-2xl inline-block">
               <img 
-                src="/logo-footer.png" 
+                src="/logo-footer.png?v=2" 
                 alt="Aquilastrat" 
                 className="h-32 w-auto"
               />
