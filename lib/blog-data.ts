@@ -461,7 +461,7 @@ export const blogPosts: BlogPost[] = [
       </ol>
       
       <h2>Conclusion</h2>
-      <p>Scaling is not just about growth—it's about sustainable, profitable growth. By carefully evaluating these factors, you can make informed decisions about when to scale and how to do it successfully.</p>
+      <p>Scaling is not just about growth, it's about sustainable, profitable growth. By carefully evaluating these factors, you can make informed decisions about when to scale and how to do it successfully.</p>
       
       <p>Remember, scaling is a journey, not a destination. Stay flexible, monitor your progress, and be prepared to adjust your strategy as needed. The key is to scale at the right pace for your business, ensuring that growth doesn't compromise the quality of your product or service.</p>
       

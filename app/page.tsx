@@ -40,80 +40,92 @@ export default function Home() {
           <div className="absolute bottom-32 sm:bottom-48 left-1/2 w-1 h-1 bg-brand-gold/30 rounded-full"></div>
           
           <div className="relative z-10 w-full text-center">
-            {/* Hero Image - Enhanced */}
-            <div className="relative mb-8 sm:mb-12">
-              <div className="w-full max-w-5xl mx-auto">
-                <figure className="rounded-2xl overflow-hidden shadow-2xl relative">
-                  <Image 
-                    src="/hero-bg.jpg" 
-                    alt="Strategic business transformation and growth" 
-                    width={2070}
-                    height={1164}
-                    className="w-full aspect-[16/9] object-cover"
-                    priority
-                  />
-                  {/* Hero Pattern Overlay */}
-                  <div className="absolute inset-0">
+                        {/* Hero Image - Enhanced */}
+            <FadeIn variant="slide-up" delay={0.2}>
+              <div className="relative mb-8 sm:mb-12">
+                <div className="w-full max-w-5xl mx-auto">
+                  <figure className="rounded-2xl overflow-hidden shadow-2xl relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl">
                     <Image 
-                      src="/hero-pattern.png" 
-                      alt="Strategic pattern overlay" 
-                      fill
-                      className="object-cover opacity-20"
+                      src="/hero-bg.jpg" 
+                      alt="Strategic business transformation and growth" 
+                      width={2070}
+                      height={1164}
+                      className="w-full aspect-[16/9] object-cover"
+                      priority
                     />
-                  </div>
-                  <div className="absolute inset-0 bg-slate-900/10"></div>
-                </figure>
+                    {/* Hero Pattern Overlay */}
+                    <div className="absolute inset-0">
+                      <Image 
+                        src="/hero-pattern.png" 
+                        alt="Strategic pattern overlay" 
+                        fill
+                        className="object-cover opacity-20"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-slate-900/10"></div>
+                  </figure>
+                </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Main Headline - Enhanced */}
-            <div>
-              <h1 className="mb-4 sm:mb-6 max-w-3xl mx-auto text-brand-navy">
-                The Strategy
-                <span className="block text-brand-gold mt-2 sm:mt-3 bg-gradient-to-r from-brand-gold to-brand-gold/80 bg-clip-text text-transparent">Partner</span>
-              </h1>
-            </div>
+            <FadeIn variant="scale" delay={0.4}>
+              <div>
+                <h1 className="mb-4 sm:mb-6 max-w-3xl mx-auto text-brand-navy">
+                  The Strategy
+                  <span className="block text-brand-gold mt-2 sm:mt-3 bg-gradient-to-r from-brand-gold to-brand-gold/80 bg-clip-text text-transparent">Partner</span>
+                </h1>
+              </div>
+            </FadeIn>
             
             {/* Sub-headline */}
-            <div>
-              <p className="mb-4 sm:mb-6 max-w-3xl mx-auto font-serif text-brand-ink">
-                For decisions that define the next chapter.
-              </p>
-            </div>
+            <FadeIn variant="slide" delay={0.6}>
+              <div>
+                <p className="mb-4 sm:mb-6 max-w-3xl mx-auto font-serif text-brand-ink">
+                  For decisions that define the next chapter.
+                </p>
+              </div>
+            </FadeIn>
             
             {/* Description */}
-            <div>
-              <p className="mb-8 sm:mb-12 max-w-2xl mx-auto text-brand-ink">
-                Trusted by founders navigating complexity, scale, and pivotal choices.
-              </p>
-            </div>
+            <FadeIn variant="fade" delay={0.8}>
+              <div>
+                <p className="mb-8 sm:mb-12 max-w-2xl mx-auto text-brand-ink">
+                  Trusted by founders navigating complexity, scale, and pivotal choices.
+                </p>
+              </div>
+            </FadeIn>
             
             {/* Tagline - Enhanced */}
-            <div>
-                              <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-8 sm:mb-12">
-                <div className="flex items-center gap-3 text-brand-gold font-serif">
-                  <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></div>
-                  <span>Quietly engaged</span>
-                </div>
-                <div className="flex items-center gap-3 text-brand-navy font-serif">
-                  <div className="w-2 h-2 bg-brand-navy rounded-full animate-pulse"></div>
-                  <span>Precisely effective</span>
+            <FadeIn variant="slide-up" delay={1.0}>
+              <div>
+                <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-8 sm:mb-12">
+                  <div className="flex items-center gap-3 text-brand-gold font-serif transform transition-all duration-300 hover:scale-105">
+                    <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></div>
+                    <span>Quietly engaged</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-brand-navy font-serif transform transition-all duration-300 hover:scale-105">
+                    <div className="w-2 h-2 bg-brand-navy rounded-full animate-pulse"></div>
+                    <span>Precisely effective</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
             
             {/* CTA Button - Enhanced */}
-            <div>
-              <div className="relative">
-                <Button 
-                  className="inline-flex text-sm sm:text-base items-center rounded-xl border border-brand-gold bg-white px-8 py-4 text-brand-navy font-medium transition hover:bg-brand-navy hover:text-brand-gold focus:ring-2 focus:ring-brand-gold/40"
-                  onClick={() => window.location.href = '/consulting-contact'}
-                >
-                  Request a Private Conversation
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-3 sm:ml-4" />
-                </Button>
+            <FadeIn variant="slide-up" delay={1.2}>
+              <div>
+                <div className="relative">
+                  <Button 
+                    className="inline-flex text-sm sm:text-base items-center rounded-xl border border-brand-gold bg-white px-8 py-4 text-brand-navy font-medium transition-all duration-300 hover:bg-brand-navy hover:text-brand-gold hover:scale-105 hover:shadow-xl focus:ring-2 focus:ring-brand-gold/40 transform"
+                    onClick={() => window.location.href = '/consulting-contact'}
+                  >
+                    Request a Private Conversation
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-3 sm:ml-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Button>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </Section>
 
@@ -155,20 +167,20 @@ export default function Home() {
               
               <FadeIn delay={0.15}>
                 <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 sm:pt-8">
-                  <div className="text-center p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <div className="text-center p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10 hover:scale-105 hover:shadow-lg transform">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 transition-all duration-300 hover:scale-110">
                       <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-brand-gold" />
                     </div>
                     <p className="text-brand-gold font-medium text-xs sm:text-sm">Quietly</p>
                   </div>
-                  <div className="text-center p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <div className="text-center p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10 hover:scale-105 hover:shadow-lg transform">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 transition-all duration-300 hover:scale-110">
                       <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-brand-gold" />
                     </div>
                     <p className="text-brand-gold font-medium text-xs sm:text-sm">Quickly</p>
                   </div>
-                  <div className="text-center p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <div className="text-center p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10 hover:scale-105 hover:shadow-lg transform">
+                    <div className="w-6 h-6 sm:w-8 sm:h-8 bg-brand-gold/20 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 transition-all duration-300 hover:scale-110">
                       <Eye className="w-3 h-3 sm:w-4 sm:h-4 text-brand-gold" />
                     </div>
                     <p className="text-brand-gold font-medium text-xs sm:text-sm">Focused</p>
@@ -180,7 +192,7 @@ export default function Home() {
             {/* Right Image */}
             <FadeIn delay={0.1}>
               <div className="relative">
-                <figure className="rounded-2xl overflow-hidden shadow-2xl">
+                <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform">
                   <Image 
                     src="/clarity.jpg" 
                     alt="Clarity and strategic discipline in business" 
@@ -199,7 +211,7 @@ export default function Home() {
         {/* SERVICES SECTION */}
         <Section className="bg-slate-50 relative overflow-hidden" id="services-section">
           {/* Section Header */}
-          <FadeIn>
+          <FadeIn variant="scale">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-brand-navy mb-4 sm:mb-6 max-w-3xl mx-auto">
                 Ways to Work Together
@@ -213,44 +225,44 @@ export default function Home() {
           {/* Service Cards */}
           <div className="space-y-16 sm:space-y-20">
             {/* Strategic Diagnostic */}
-            <FadeIn delay={0.05}>
-              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-0.5">
+            <FadeIn variant="slide-up" delay={0.05}>
+              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
                 <div className="p-8 sm:p-12 md:p-16">
                   <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
                     <div>
                       <div className="mb-6 sm:mb-8">
-                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3">90-minute diagnostic</div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3">
+                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">90-minute diagnostic</div>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
                           The Strategic Diagnostic
                         </h3>
-                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold"></div>
+                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
                       </div>
                       
-                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink">
+                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink transition-all duration-300 group-hover:text-brand-ink/90">
                         A focused, confidential session to uncover what's really holding the business back.
                       </p>
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                        <p>
+                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
                           This engagement is designed for founders facing uncertainty when growth slows, complexity builds, or key decisions feel delayed.
                         </p>
-                        <p>
+                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
                           In a single, sharply facilitated session, we isolate the most critical constraint within your growth model.
                         </p>
                       </div>
 
-                      <div className="mt-6 pt-6 border-t border-slate-200/60">
+                      <div className="mt-6 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
                         <ul className="space-y-2 text-brand-ink">
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Identify core growth constraints</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Surface 2-3 actionable shifts</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Save weeks of second-guessing</span>
                           </li>
                         </ul>
@@ -258,16 +270,16 @@ export default function Home() {
                     </div>
 
                     <div className="relative">
-                      <figure className="rounded-2xl overflow-hidden shadow-2xl">
+                      <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
                         <Image 
                           src="/diagnostic.jpg" 
                           alt="Strategic diagnostic and business assessment" 
                           width={2070}
                           height={1553}
-                          className="w-full aspect-[4/3] object-cover"
+                          className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-slate-900/10"></div>
+                        <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
                       </figure>
                     </div>
                   </div>
@@ -276,60 +288,60 @@ export default function Home() {
             </FadeIn>
 
             {/* Growth Architecture Reset */}
-            <FadeIn delay={0.1}>
-              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-0.5">
+            <FadeIn variant="slide-up" delay={0.1}>
+              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
                 <div className="p-8 sm:p-12 md:p-16">
                   <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
                     <div className="order-2 lg:order-1">
                       <div className="relative">
-                        <figure className="rounded-2xl overflow-hidden shadow-2xl">
+                        <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
                           <Image 
                             src="/growth.jpg" 
                             alt="Business growth acceleration and scaling" 
                             width={2015}
                             height={1343}
-                            className="w-full aspect-[4/3] object-cover"
+                            className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-slate-900/10"></div>
+                          <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
                         </figure>
                       </div>
                     </div>
 
                     <div className="order-1 lg:order-2">
                       <div className="mb-6 sm:mb-8">
-                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3">6-8 week intensive</div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3">
+                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">6-8 week intensive</div>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
                           Growth Architecture Reset
                         </h3>
-                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold"></div>
+                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
                       </div>
                       
-                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink">
+                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink transition-all duration-300 group-hover:text-brand-ink/90">
                         A short, intensive engagement to rebuild your revenue model from the inside out.
                       </p>
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                        <p>
-                          This is for companies that aren't short on ambition — but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
+                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
+                          This is for companies that aren't short on ambition, but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
                         </p>
-                        <p>
-                          Over 6—8 weeks, we work closely with your leadership team to reset the core architecture of growth.
+                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
+                          Over 6-8 weeks, we work closely with your leadership team to reset the core architecture of growth.
                         </p>
                       </div>
 
-                      <div className="mt-6 pt-6 border-t border-slate-200/60">
+                      <div className="mt-6 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
                         <ul className="space-y-2 text-brand-ink">
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Clarify value proposition</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Fix conversion breakdowns</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Eliminate wasteful complexity</span>
                           </li>
                         </ul>
@@ -341,44 +353,44 @@ export default function Home() {
             </FadeIn>
 
             {/* Strategic Partner Retainer */}
-            <FadeIn delay={0.15}>
-              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:-translate-y-0.5">
+            <FadeIn variant="slide-up" delay={0.15}>
+              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
                 <div className="p-8 sm:p-12 md:p-16">
                   <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
                     <div>
                       <div className="mb-6 sm:mb-8">
-                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3">Ongoing partnership</div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3">
+                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">Ongoing partnership</div>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
                           Strategic Partner Retainer
                         </h3>
-                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold"></div>
+                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
                       </div>
                       
-                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink">
+                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink transition-all duration-300 group-hover:text-brand-ink/90">
                         A discreet, ongoing partnership for founders who value quiet strategic edge.
                       </p>
                       
                       <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                        <p>
+                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
                           For leadership teams navigating change, risk, or sustained growth, this retainer provides ongoing access to high-trust counsel and intelligence.
                         </p>
-                        <p>
+                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
                           We act as a quiet partner - available to think alongside you, challenge assumptions, and surface unseen opportunities or threats.
                         </p>
                       </div>
 
-                      <div className="mt-6 pt-6 border-t border-slate-200/60">
+                      <div className="mt-6 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
                         <ul className="space-y-2 text-brand-ink">
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Monthly strategic briefings</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Signal filtering from noise</span>
                           </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
                             <span>Direct input on key decisions</span>
                           </li>
                         </ul>
@@ -386,16 +398,16 @@ export default function Home() {
                     </div>
 
                     <div className="relative">
-                      <figure className="rounded-2xl overflow-hidden shadow-2xl">
+                      <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
                         <Image 
                           src="/retainer.jpg" 
                           alt="Strategic partnership and ongoing collaboration" 
                           width={2070}
                           height={1553}
-                          className="w-full aspect-[4/3] object-cover"
+                          className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-slate-900/10"></div>
+                        <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
                       </figure>
                     </div>
                   </div>
@@ -404,9 +416,9 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          {/* When to Engage Section */}
+                    {/* When to Engage Section */}
           <div className="mt-16 sm:mt-20 bg-brand-navy/5 rounded-lg sm:rounded-xl p-10 sm:p-14 border border-brand-navy/10">
-            <FadeIn>
+            <FadeIn variant="scale">
               <div className="text-center mb-12 sm:mb-16">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-navy mb-4 sm:mb-6 max-w-3xl mx-auto">
                   When to Engage
@@ -417,18 +429,18 @@ export default function Home() {
               </div>
             </FadeIn>
             
-            <FadeIn delay={0.05}>
+            <FadeIn variant="slide-up" delay={0.05}>
               <div className="grid md:grid-cols-2 gap-5 sm:gap-6 max-w-4xl mx-auto">
                 {[
-                                          "Growth has slowed, but the underlying cause isn't obvious.",
+                  "Growth has slowed, but the underlying cause isn't obvious.",
                   "Strategic decisions are piling up, with no clear way forward.",
                   "The team is executing, but direction feels scattered.",
                   "Complexity is building - and starting to cost time, focus, and opportunity.",
-                                          "You've outgrown past strategies, but haven't replaced them with better ones.",
+                  "You've outgrown past strategies, but haven't replaced them with better ones.",
                   "External pressures are mounting, requiring strategic clarity."
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-3 items-start">
-                    <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                  <div key={index} className="flex gap-3 items-start transition-all duration-300 hover:translate-x-2 hover:bg-white/50 p-2 rounded-lg transform">
+                    <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150"></div>
                     <p className="text-slate-700">{item}</p>
                   </div>
                 ))}
@@ -436,14 +448,14 @@ export default function Home() {
             </FadeIn>
 
             {/* CTA Button */}
-            <FadeIn delay={0.1}>
+            <FadeIn variant="slide-up" delay={0.1}>
               <div className="mt-16 sm:mt-20 text-center">
                 <Link href="/contact">
                   <Button 
-                    className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+                    className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
                   >
                     Request a Conversation
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                 </Link>
               </div>
@@ -458,7 +470,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.03)_1px,transparent_0)] bg-[size:60px_60px]"></div>
           </div>
           
-          <FadeIn>
+          <FadeIn variant="slide-up">
             <div className="text-center mb-16 sm:mb-20">
               <h2 className="text-white mb-6 sm:mb-8 max-w-3xl mx-auto">
                 How We Work
@@ -472,7 +484,7 @@ export default function Home() {
             </div>
           </FadeIn>
           
-          <FadeIn delay={0.05}>
+          <FadeIn variant="slide-up" delay={0.05}>
             <div className="relative mb-16 sm:mb-20">
               <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-white/8 transform -translate-y-1/2 hidden lg:block"></div>
               <div className="grid lg:grid-cols-3 gap-10 sm:gap-12 relative z-10">
@@ -493,9 +505,9 @@ export default function Home() {
                     description: "We stay close enough to sharpen decisions, and light enough not to burden your team."
                   }
                 ].map((step, index) => (
-                  <div key={index} className="text-center relative group">
-                    <div className="w-16 h-16 sm:w-18 sm:h-18 bg-white/8 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-6 sm:mb-8 border border-white/20 shadow-sm">
-                      <step.icon className="w-7 h-7 sm:w-8 sm:h-8 text-brand-gold" />
+                  <div key={index} className="text-center relative group transition-all duration-500 hover:-translate-y-2 transform">
+                    <div className="w-16 h-16 sm:w-18 sm:h-18 bg-white/8 text-white rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mx-auto mb-6 sm:mb-8 border border-white/20 shadow-sm transition-all duration-300 hover:bg-white/12 hover:scale-110 hover:shadow-lg">
+                      <step.icon className="w-7 h-7 sm:w-8 sm:h-8 text-brand-gold transition-all duration-300 group-hover:scale-110" />
                     </div>
                     <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-white mb-4 sm:mb-6 group-hover:text-brand-gold transition-colors duration-300 max-w-3xl mx-auto">
                       {step.title}
@@ -509,17 +521,17 @@ export default function Home() {
             </div>
           </FadeIn>
           
-          <FadeIn delay={0.1}>
+          <FadeIn variant="scale" delay={0.1}>
             <div className="py-20">
               <div className="max-w-3xl mx-auto text-center space-y-6">
-                <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-40 h-40 mx-auto rounded-full grayscale hover:grayscale-0 transition" />
+                <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-40 h-40 mx-auto rounded-full grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110 transform shadow-lg hover:shadow-xl" />
                 <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
-                  &ldquo;Strategy isn't about adding more — it's about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
+                  &ldquo;Strategy isn't about adding more it's about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
                 </blockquote>
-                                  <div className="space-y-2">
-                    <p className="text-sm text-slate-400">Suhaas Chittapurath</p>
-                    <p className="text-sm text-slate-400">Founder, Aquilastrat</p>
-                  </div>
+                <div className="space-y-2">
+                  <p className="text-sm text-slate-400">Suhaas Chittapurath</p>
+                  <p className="text-sm text-slate-400">Founder, Aquilastrat</p>
+                </div>
               </div>
             </div>
           </FadeIn>
@@ -528,13 +540,13 @@ export default function Home() {
         {/* INVITATION SECTION */}
         <Section className="bg-white text-brand-navy relative overflow-hidden border-t-2 border-b-2 border-brand-gold">
           <div className="relative z-10 text-center">
-            <FadeIn>
+            <FadeIn variant="slide-up">
               <h2 className="mb-6 sm:mb-8 max-w-3xl mx-auto text-brand-navy leading-tight">
                 An Invitation
               </h2>
-              <div className="w-16 h-0.5 bg-brand-gold mx-auto mb-6 sm:mb-8"></div>
+              <div className="w-16 h-0.5 bg-brand-gold mx-auto mb-6 sm:mb-8 transition-all duration-300 hover:w-20"></div>
             </FadeIn>
-            <FadeIn delay={0.05}>
+            <FadeIn variant="slide" delay={0.05}>
               <div className="space-y-4 sm:space-y-5 mb-10 sm:mb-12 max-w-3xl mx-auto">
                 <p className="text-brand-ink">
                   Most leaders don't need more advice. They need a space to think with someone who sees the signal through the noise.
@@ -544,14 +556,14 @@ export default function Home() {
                 </p>
               </div>
             </FadeIn>
-            <FadeIn delay={0.1}>
+            <FadeIn variant="scale" delay={0.1}>
               <div className="relative">
                 <Link href="/consulting-contact">
                   <Button 
-                    className="inline-flex items-center rounded-xl border border-brand-gold bg-white px-6 py-3 text-brand-navy font-medium transition hover:bg-brand-navy hover:text-brand-gold focus:ring-2 focus:ring-brand-gold/40"
+                    className="inline-flex items-center rounded-xl border border-brand-gold bg-white px-6 py-3 text-brand-navy font-medium transition-all duration-300 hover:bg-brand-navy hover:text-brand-gold hover:scale-105 hover:shadow-xl focus:ring-2 focus:ring-brand-gold/40 transform"
                   >
                     Request a Private Conversation
-                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 ml-3 sm:ml-4" />
+                    <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 ml-3 sm:ml-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </Button>
                 </Link>
               </div>

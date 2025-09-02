@@ -2,7 +2,7 @@ import { DefaultSeoProps } from 'next-seo';
 
 export const defaultSEO: DefaultSeoProps = {
   titleTemplate: '%s | Aquilastrat',
-  defaultTitle: 'Aquilastrat - Understated Strategy for Founders',
+  defaultTitle: 'Strategic Partners for Leaders | Aquilastrat',
   description: 'Strategic consulting and data management services for founders and growing companies. Understated strategy that delivers results.',
   canonical: 'https://www.aquilastrat.com',
   openGraph: {
@@ -39,12 +39,12 @@ export const defaultSEO: DefaultSeoProps = {
   additionalLinkTags: [
     {
       rel: 'icon',
-      href: '/favicon.png?v=2',
-      type: 'image/png',
+      href: '/favicon.ico',
+      type: 'image/x-icon',
     },
     {
       rel: 'apple-touch-icon',
-      href: '/favicon.png?v=2',
+      href: '/favicon.png',
       sizes: '180x180',
     },
   ],
