@@ -18,22 +18,22 @@ export default function FadeIn({
     fade: {
       initial: { opacity: 0, y: 24 },
       animate: { opacity: 1, y: 0 },
-      transition: { duration, ease: [0.25, 0.46, 0.45, 0.94], delay }
+      transition: { duration, ease: 'easeOut', delay }
     },
     slide: {
       initial: { opacity: 0, x: -24 },
       animate: { opacity: 1, x: 0 },
-      transition: { duration, ease: [0.25, 0.46, 0.45, 0.94], delay }
+      transition: { duration, ease: 'easeOut', delay }
     },
     scale: {
       initial: { opacity: 0, scale: 0.95 },
       animate: { opacity: 1, scale: 1 },
-      transition: { duration, ease: [0.25, 0.46, 0.45, 0.94], delay }
+      transition: { duration, ease: 'easeOut', delay }
     },
     'slide-up': {
       initial: { opacity: 0, y: 48 },
       animate: { opacity: 1, y: 0 },
-      transition: { duration, ease: [0.25, 0.46, 0.45, 0.94], delay }
+      transition: { duration, ease: 'easeOut', delay }
     }
   };
 
