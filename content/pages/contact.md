@@ -1,7 +1,7 @@
 ---
 email: "contact@aquilastrat.com"
 phone: "+91945540655"
-address: "Strategic consulting services for founders and growing companies"
+address: "Executive decision retainer and data management services for founders and leadership teams"
 pageTitle: "Contact Us"
-pageDescription: "Ready to transform your business strategy? Let's discuss how we can help you achieve your goals."
+pageDescription: "Navigating complex choices or data challenges? Start with a focused strategic conversation."
 ---

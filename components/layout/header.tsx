@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Ways to Work Together", href: "/#services-section" },
+  { name: "Decision Retainer", href: "/#services-section" },
   { name: "Data Management", href: "/data-management" },
   { name: "Insights", href: "/blog" },
   { name: "Contact", href: "/contact" },
@@ -27,9 +27,15 @@ export function Header() {
   };
 
   const handleAnchorClick = (href: string) => {
+    if (pathname !== "/") {
+      window.location.href = href;
+      closeMobileMenu();
+      return;
+    }
+
     const element = document.querySelector(href.substring(1));
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
     closeMobileMenu();
   };
@@ -37,14 +43,14 @@ export function Header() {
   return (
     <motion.header 
       className="sticky top-0 z-50 h-16 border-b border-border bg-surface/95 backdrop-blur-sm"
-      initial={{ y: -100 }}
+      initial={false}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo/Wordmark */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
+          initial={false}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
@@ -67,15 +73,20 @@ export function Header() {
               return (
                 <motion.button
                   key={item.name}
-                  initial={{ opacity: 0, y: -10 }}
+                  initial={false}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => {
+                    if (pathname !== "/") {
+                      window.location.href = item.href;
+                      return;
+                    }
+
                     const element = document.querySelector(item.href.substring(1));
                     if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
+                      element.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                   className={cn(
@@ -91,7 +102,7 @@ export function Header() {
             return (
               <motion.div
                 key={item.name}
-                initial={{ opacity: 0, y: -10 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
                 whileHover={{ y: -2 }}
@@ -154,7 +165,7 @@ export function Header() {
           className="fixed top-16 left-0 right-0 bg-white border-b border-border shadow-lg md:hidden z-50"
         >
           <nav className="px-4 py-6 space-y-4">
-            {navigation.map((item, index) => {
+            {navigation.map((item) => {
               const isActive = pathname === item.href;
               const isAnchorLink = item.href.startsWith('/#');
               

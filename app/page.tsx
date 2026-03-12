@@ -71,9 +71,11 @@ export default function Home() {
             {/* Main Headline - Enhanced */}
             <FadeIn variant="scale" delay={0.4}>
               <div>
-                <h1 className="mb-4 sm:mb-6 max-w-3xl mx-auto text-brand-navy">
-                  The Strategy
-                  <span className="block text-brand-gold mt-2 sm:mt-3 bg-gradient-to-r from-brand-gold to-brand-gold/80 bg-clip-text text-transparent">Partner</span>
+                <h1 className="mb-8 sm:mb-10 max-w-5xl mx-auto text-brand-navy text-4xl sm:text-5xl md:text-[3.2rem] leading-[1.24]">
+                  <span className="block md:whitespace-nowrap">Strategic Clarity for Founders</span>
+                  <span className="block md:whitespace-nowrap pb-2 sm:pb-3 text-brand-gold mt-2 sm:mt-3 bg-gradient-to-r from-brand-gold to-brand-gold/80 bg-clip-text text-transparent">
+                    Navigating Complex Decisions
+                  </span>
                 </h1>
               </div>
             </FadeIn>
@@ -82,7 +84,7 @@ export default function Home() {
             <FadeIn variant="slide" delay={0.6}>
               <div>
                 <p className="mb-4 sm:mb-6 max-w-3xl mx-auto font-serif text-brand-ink">
-                  For decisions that define the next chapter.
+                  When companies grow, complexity grows with them.
                 </p>
               </div>
             </FadeIn>
@@ -90,37 +92,25 @@ export default function Home() {
             {/* Description */}
             <FadeIn variant="fade" delay={0.8}>
               <div>
-                <p className="mb-8 sm:mb-12 max-w-2xl mx-auto text-brand-ink">
-                  Trusted by founders navigating complexity, scale, and pivotal choices.
-                </p>
-              </div>
-            </FadeIn>
-            
-            {/* Tagline - Enhanced */}
-            <FadeIn variant="slide-up" delay={1.0}>
-              <div>
-                <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center mb-8 sm:mb-12">
-                  <div className="flex items-center gap-3 text-brand-gold font-serif transform transition-all duration-300 hover:scale-105">
-                    <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></div>
-                    <span>Quietly engaged</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-brand-navy font-serif transform transition-all duration-300 hover:scale-105">
-                    <div className="w-2 h-2 bg-brand-navy rounded-full animate-pulse"></div>
-                    <span>Precisely effective</span>
-                  </div>
+                <div className="mb-6 sm:mb-7 max-w-2xl mx-auto space-y-3 text-brand-ink">
+                  <p>Inputs multiply. Priorities compete. Decisions slow.</p>
+                  <p>
+                    Aquilastrat provides founders with an external intelligence and clarity layer for the decisions
+                    that shape the next stage of the business.
+                  </p>
                 </div>
               </div>
             </FadeIn>
             
             {/* CTA Button - Enhanced */}
-            <FadeIn variant="slide-up" delay={1.2}>
+            <FadeIn variant="slide-up" delay={1.0}>
               <div>
                 <div className="relative">
                   <Button 
                     className="inline-flex text-sm sm:text-base items-center rounded-xl border border-brand-gold bg-white px-8 py-4 text-brand-navy font-medium transition-all duration-300 hover:bg-brand-navy hover:text-brand-gold hover:scale-105 hover:shadow-xl focus:ring-2 focus:ring-brand-gold/40 transform"
                     onClick={() => window.location.href = '/consulting-contact'}
                   >
-                    Request a Private Conversation
+                    Request a Strategic Conversation
                     <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-3 sm:ml-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                 </div>
@@ -159,7 +149,8 @@ export default function Home() {
                   </p>
                   <div className="space-y-3">
                     <p className="text-white/80 max-w-2xl">
-                      We work with a small number of founders and executives to isolate the problems that matter, and act on them with precision.
+                      We work with a small number of founders to isolate the constraints that actually determine
+                      progress and frame the decisions that matter most.
                     </p>
                   </div>
                 </div>
@@ -210,213 +201,129 @@ export default function Home() {
 
         {/* SERVICES SECTION */}
         <Section className="bg-slate-50 relative overflow-hidden" id="services-section">
-          {/* Section Header */}
           <FadeIn variant="scale">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-brand-navy mb-4 sm:mb-6 max-w-3xl mx-auto">
-                Ways to Work Together
+                Executive Decision Retainer
               </h2>
-              <p className="max-w-3xl mx-auto text-brand-ink">
-                Each engagement is shaped by the same principle: eliminate noise, focus on what matters, and create the conditions for clear decisions.
-              </p>
             </div>
           </FadeIn>
 
-          {/* Service Cards */}
-          <div className="space-y-16 sm:space-y-20">
-            {/* Strategic Diagnostic */}
-            <FadeIn variant="slide-up" delay={0.05}>
-              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
-                <div className="p-8 sm:p-12 md:p-16">
-                  <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
-                    <div>
-                      <div className="mb-6 sm:mb-8">
-                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">90-minute diagnostic</div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
-                          The Strategic Diagnostic
-                        </h3>
-                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
+          <FadeIn variant="slide-up" delay={0.05}>
+            <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
+              <div className="p-8 sm:p-12 md:p-16">
+                <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-start">
+                  <div>
+                    <div className="mb-6 sm:mb-8">
+                      <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">
+                        Ongoing strategic partnership
                       </div>
-                      
-                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink transition-all duration-300 group-hover:text-brand-ink/90">
-                        A focused, confidential session to uncover what's really holding the business back.
-                      </p>
-                      
-                      <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
-                          This engagement is designed for founders facing uncertainty when growth slows, complexity builds, or key decisions feel delayed.
-                        </p>
-                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
-                          In a single, sharply facilitated session, we isolate the most critical constraint within your growth model.
-                        </p>
-                      </div>
-
-                      <div className="mt-6 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
-                        <ul className="space-y-2 text-brand-ink">
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Identify core growth constraints</span>
-                          </li>
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Surface 2-3 actionable shifts</span>
-                          </li>
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-1.5 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Save weeks of second-guessing</span>
-                          </li>
-                        </ul>
-                      </div>
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
+                        Executive Decision Retainer
+                      </h3>
+                      <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
                     </div>
 
-                    <div className="relative">
-                      <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
-                        <Image 
-                          src="/diagnostic.jpg" 
-                          alt="Strategic diagnostic and business assessment" 
-                          width={2070}
-                          height={1553}
-                          className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
-                      </figure>
+                    <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
+                      <p className="transition-all duration-300 group-hover:text-brand-ink/90">
+                        Aquilastrat operates as an external decision intelligence layer for the founder.
+                      </p>
+                      <p className="transition-all duration-300 group-hover:text-brand-ink/90">
+                        This is not consulting, execution, or advisory projects.
+                      </p>
+                      <p className="transition-all duration-300 group-hover:text-brand-ink/90">
+                        It is an ongoing strategic partnership focused on improving the quality and clarity of
+                        important decisions.
+                      </p>
+                    </div>
+
+                    <div className="mt-8 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
+                      <h4 className="text-lg font-serif font-semibold text-brand-navy mb-4">
+                        What this engagement focuses on
+                      </h4>
+                      <div className="space-y-4 text-brand-ink">
+                        {[
+                          {
+                            title: "Strategic Diagnosis",
+                            description:
+                              "Identify the underlying constraint behind growth stalls, operational friction, or conflicting initiatives."
+                          },
+                          {
+                            title: "Decision Framing",
+                            description:
+                              "Structure complex decisions so trade offs and second order effects become visible."
+                          },
+                          {
+                            title: "Strategic Calibration",
+                            description:
+                              "Ensure teams, agencies, and initiatives remain aligned with the founder's actual priorities."
+                          },
+                          {
+                            title: "Founder Decision Support",
+                            description: "Direct access when significant decisions arise."
+                          }
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-start gap-3 transition-all duration-300 hover:translate-x-2 transform">
+                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150"></div>
+                            <div>
+                              <p className="font-medium text-brand-navy">{item.title}</p>
+                              <p className="text-brand-ink/90">{item.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Card>
-            </FadeIn>
 
-            {/* Growth Architecture Reset */}
-            <FadeIn variant="slide-up" delay={0.1}>
-              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
-                <div className="p-8 sm:p-12 md:p-16">
-                  <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
-                    <div className="order-2 lg:order-1">
-                      <div className="relative">
-                        <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
-                          <Image 
-                            src="/growth.jpg" 
-                            alt="Business growth acceleration and scaling" 
-                            width={2015}
-                            height={1343}
-                            className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
-                        </figure>
-                      </div>
-                    </div>
+                  <div className="space-y-6 sm:space-y-8">
+                    <figure className="relative rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
+                      <Image
+                        src="/retainer.jpg"
+                        alt="Executive decision retainer and ongoing founder partnership"
+                        width={2070}
+                        height={1553}
+                        className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
+                    </figure>
 
-                    <div className="order-1 lg:order-2">
-                      <div className="mb-6 sm:mb-8">
-                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">6-8 week intensive</div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
-                          Growth Architecture Reset
-                        </h3>
-                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
-                      </div>
-                      
-                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink transition-all duration-300 group-hover:text-brand-ink/90">
-                        A short, intensive engagement to rebuild your revenue model from the inside out.
-                      </p>
-                      
-                      <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
-                          This is for companies that aren't short on ambition, but are leaking momentum through unclear messaging, disjointed execution, or strategy that no longer fits the market.
+                    <div className="bg-slate-50 rounded-xl border border-slate-200/80 p-6 sm:p-8">
+                      <h4 className="text-lg font-serif font-semibold text-brand-navy mb-4">
+                        Typical engagement rhythm
+                      </h4>
+                      <ul className="space-y-2 text-brand-ink">
+                        <li className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Weekly or biweekly strategic calls</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Asynchronous decision discussions when needed</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <span>Concise written synthesis when clarity benefits</span>
+                        </li>
+                      </ul>
+
+                      <div className="mt-6 pt-6 border-t border-slate-200/80">
+                        <h4 className="text-lg font-serif font-semibold text-brand-navy mb-2">
+                          Investment
+                        </h4>
+                        <p className="text-brand-ink">
+                          Typical engagements range between £3,000 and £5,000 per month, depending on decision
+                          complexity and level of involvement.
                         </p>
-                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
-                          Over 6-8 weeks, we work closely with your leadership team to reset the core architecture of growth.
-                        </p>
-                      </div>
-
-                      <div className="mt-6 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
-                        <ul className="space-y-2 text-brand-ink">
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Clarify value proposition</span>
-                          </li>
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Fix conversion breakdowns</span>
-                          </li>
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Eliminate wasteful complexity</span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-              </Card>
-            </FadeIn>
+              </div>
+            </Card>
+          </FadeIn>
 
-            {/* Strategic Partner Retainer */}
-            <FadeIn variant="slide-up" delay={0.15}>
-              <Card className="bg-white shadow-sm hover:shadow-xl transition-all duration-500 border border-border/50 hover:-translate-y-2 transform group">
-                <div className="p-8 sm:p-12 md:p-16">
-                  <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
-                    <div>
-                      <div className="mb-6 sm:mb-8">
-                        <div className="text-xs tracking-wider text-slate-500 uppercase mb-3 transition-all duration-300 group-hover:text-brand-gold">Ongoing partnership</div>
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-brand-navy mb-2 sm:mb-3 transition-all duration-300 group-hover:text-brand-navy/90">
-                          Strategic Partner Retainer
-                        </h3>
-                        <div className="w-8 h-0.5 sm:w-10 h-0.5 bg-brand-gold transition-all duration-500 group-hover:w-16 group-hover:bg-brand-gold/80"></div>
-                      </div>
-                      
-                      <p className="font-medium mb-6 sm:mb-8 max-w-2xl text-brand-ink transition-all duration-300 group-hover:text-brand-ink/90">
-                        A discreet, ongoing partnership for founders who value quiet strategic edge.
-                      </p>
-                      
-                      <div className="space-y-3 sm:space-y-4 leading-relaxed max-w-2xl text-brand-ink">
-                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
-                          For leadership teams navigating change, risk, or sustained growth, this retainer provides ongoing access to high-trust counsel and intelligence.
-                        </p>
-                        <p className="transition-all duration-300 group-hover:text-brand-ink/90">
-                          We act as a quiet partner - available to think alongside you, challenge assumptions, and surface unseen opportunities or threats.
-                        </p>
-                      </div>
-
-                      <div className="mt-6 pt-6 border-t border-slate-200/60 transition-all duration-300 group-hover:border-brand-gold/30">
-                        <ul className="space-y-2 text-brand-ink">
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Monthly strategic briefings</span>
-                          </li>
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Signal filtering from noise</span>
-                          </li>
-                          <li className="flex items-start gap-2 transition-all duration-300 hover:translate-x-2 hover:text-brand-navy transform">
-                            <div className="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2 flex-shrink-0 transition-all duration-300 hover:scale-150 hover:bg-brand-gold/80"></div>
-                            <span>Direct input on key decisions</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="relative">
-                      <figure className="rounded-2xl overflow-hidden shadow-2xl transition-all duration-700 hover:scale-[1.02] hover:shadow-3xl transform group-hover:shadow-brand-gold/20">
-                        <Image 
-                          src="/retainer.jpg" 
-                          alt="Strategic partnership and ongoing collaboration" 
-                          width={2070}
-                          height={1553}
-                          className="w-full aspect-[4/3] object-cover transition-all duration-700 group-hover:scale-105"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-slate-900/10 transition-all duration-300 group-hover:bg-slate-900/5"></div>
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </FadeIn>
-          </div>
-
-                    {/* When to Engage Section */}
+          {/* When to Engage Section */}
           <div className="mt-16 sm:mt-20 bg-brand-navy/5 rounded-lg sm:rounded-xl p-10 sm:p-14 border border-brand-navy/10">
             <FadeIn variant="scale">
               <div className="text-center mb-12 sm:mb-16">
@@ -424,7 +331,7 @@ export default function Home() {
                   When to Engage
                 </h3>
                 <p className="max-w-3xl mx-auto text-brand-ink">
-                  This work is most valuable when something important is at stake - and clarity feels just out of reach.
+                  This engagement becomes valuable when the business is moving quickly but strategic clarity is becoming harder to maintain.
                 </p>
               </div>
             </FadeIn>
@@ -450,11 +357,11 @@ export default function Home() {
             {/* CTA Button */}
             <FadeIn variant="slide-up" delay={0.1}>
               <div className="mt-16 sm:mt-20 text-center">
-                <Link href="/contact">
+                <Link href="/consulting-contact">
                   <Button 
                     className="bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl transform"
                   >
-                    Request a Conversation
+                    Request a Strategic Conversation
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                   </Button>
                 </Link>
@@ -491,18 +398,18 @@ export default function Home() {
                 {[
                   {
                     icon: Target,
-                    title: "Diagnose with precision",
-                    description: "We begin by identifying the single constraint limiting progress. Not symptoms. The root."
+                    title: "Diagnose with Precision",
+                    description: "We begin by identifying the single constraint limiting progress. Not symptoms. The underlying cause."
                   },
                   {
                     icon: Lightbulb,
-                    title: "Design for impact",
-                    description: "Together, we define the few actions that will move the business forward. No bloat. No noise. Just what matters."
+                    title: "Design for Impact",
+                    description: "Together we frame the few decisions that will move the business forward and eliminate unnecessary initiatives."
                   },
                   {
                     icon: Shield,
-                    title: "Guide with discipline",
-                    description: "We stay close enough to sharpen decisions, and light enough not to burden your team."
+                    title: "Guide with Discipline",
+                    description: "We remain close enough to sharpen thinking and surface trade offs without adding operational complexity to your team."
                   }
                 ].map((step, index) => (
                   <div key={index} className="text-center relative group transition-all duration-500 hover:-translate-y-2 transform">
@@ -526,7 +433,7 @@ export default function Home() {
               <div className="max-w-3xl mx-auto text-center space-y-6">
                 <img src="/founder.png" alt="Suhaas, Founder of Aquilastrat" className="w-40 h-40 mx-auto rounded-full grayscale hover:grayscale-0 transition-all duration-500 hover:scale-110 transform shadow-lg hover:shadow-xl" />
                 <blockquote className="text-2xl md:text-3xl font-serif text-slate-200">
-                  &ldquo;Strategy isn't about adding more it's about knowing exactly what to strip away until the right decision becomes unavoidable.&rdquo;
+                  &ldquo;Progress rarely comes from adding more. It comes from removing noise until the right decision becomes obvious.&rdquo;
                 </blockquote>
                 <div className="space-y-2">
                   <p className="text-sm text-slate-400">Suhaas Chittapurath</p>
@@ -549,10 +456,14 @@ export default function Home() {
             <FadeIn variant="slide" delay={0.05}>
               <div className="space-y-4 sm:space-y-5 mb-10 sm:mb-12 max-w-3xl mx-auto">
                 <p className="text-brand-ink">
-                  Most leaders don't need more advice. They need a space to think with someone who sees the signal through the noise.
+                  Most founders do not lack advice.
                 </p>
                 <p className="text-brand-ink">
-                  If that's what you're looking for, the door is open.
+                  They lack a space to think clearly about the decisions that matter most.
+                </p>
+                <p className="text-brand-ink">
+                  If you are navigating complex choices and want sharper perspective before committing resources, we
+                  can start with a strategic conversation.
                 </p>
               </div>
             </FadeIn>
@@ -562,7 +473,7 @@ export default function Home() {
                   <Button 
                     className="inline-flex items-center rounded-xl border border-brand-gold bg-white px-6 py-3 text-brand-navy font-medium transition-all duration-300 hover:bg-brand-navy hover:text-brand-gold hover:scale-105 hover:shadow-xl focus:ring-2 focus:ring-brand-gold/40 transform"
                   >
-                    Request a Private Conversation
+                    Request a Strategic Conversation
                     <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 ml-3 sm:ml-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                   </Button>
                 </Link>

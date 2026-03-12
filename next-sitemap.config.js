@@ -8,13 +8,14 @@ module.exports = {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/admin', '/api'],
       },
     ],
     additionalSitemaps: [
       'https://www.aquilastrat.com/sitemap.xml',
     ],
   },
-  exclude: ['/admin/*', '/api/*'],
+  exclude: ['/admin', '/admin/*', '/api/*'],
   changefreq: 'weekly',
   priority: 0.7,
 };

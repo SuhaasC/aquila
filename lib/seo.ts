@@ -2,22 +2,24 @@ import { DefaultSeoProps } from 'next-seo';
 
 export const defaultSEO: DefaultSeoProps = {
   titleTemplate: '%s | Aquilastrat',
-  defaultTitle: 'Strategic Partners for Leaders | Aquilastrat',
-  description: 'Strategic consulting and data management services for founders and growing companies. Understated strategy that delivers results.',
+  defaultTitle: 'Strategic Clarity for Founders | Aquilastrat',
+  description:
+    'Executive decision retainer and data management services for founders navigating complex decisions.',
   canonical: 'https://www.aquilastrat.com',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.aquilastrat.com',
     siteName: 'Aquilastrat',
-    title: 'Aquilastrat - Understated Strategy for Founders',
-    description: 'Strategic consulting and data management services for founders and growing companies.',
+    title: 'Aquilastrat | Strategic Clarity for Founders',
+    description:
+      'Executive decision retainer and data management services for founders navigating complex decisions.',
     images: [
       {
         url: 'https://www.aquilastrat.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aquilastrat - Strategic Consulting',
+        alt: 'Aquilastrat - Strategic Clarity for Founders',
       },
     ],
   },

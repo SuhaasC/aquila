@@ -35,14 +35,14 @@ collections:
           - {label: "Hero Title", name: "heroTitle", widget: "string"}
           - {label: "Hero Subtitle", name: "heroSubtitle", widget: "string"}
           - {label: "Hero Description", name: "heroDescription", widget: "text"}
-          - {label: "Services Title", name: "servicesTitle", widget: "string"}
-          - {label: "Services Description", name: "servicesDescription", widget: "text"}
-          - {label: "Service 1 Title", name: "service1Title", widget: "string"}
-          - {label: "Service 1 Description", name: "service1Description", widget: "text"}
-          - {label: "Service 2 Title", name: "service2Title", widget: "string"}
-          - {label: "Service 2 Description", name: "service2Description", widget: "text"}
-          - {label: "Service 3 Title", name: "service3Title", widget: "string"}
-          - {label: "Service 3 Description", name: "service3Description", widget: "text"}
+          - {label: "Retainer Title", name: "servicesTitle", widget: "string"}
+          - {label: "Retainer Description", name: "servicesDescription", widget: "text"}
+          - {label: "Focus Area 1 Title", name: "service1Title", widget: "string"}
+          - {label: "Focus Area 1 Description", name: "service1Description", widget: "text"}
+          - {label: "Focus Area 2 Title", name: "service2Title", widget: "string"}
+          - {label: "Focus Area 2 Description", name: "service2Description", widget: "text"}
+          - {label: "Focus Area 3 Title", name: "service3Title", widget: "string"}
+          - {label: "Focus Area 3 Description", name: "service3Description", widget: "text"}
 
       - file: "content/pages/data-management.md"
         label: "Data Management Page"
@@ -63,7 +63,7 @@ collections:
         fields:
           - {label: "Contact Email", name: "email", widget: "string"}
           - {label: "Contact Phone", name: "phone", widget: "string"}
-          - {label: "Address", name: "address", widget: "text"}
+          - {label: "Service Summary", name: "address", widget: "text"}
           - {label: "Page Title", name: "pageTitle", widget: "string"}
           - {label: "Page Description", name: "pageDescription", widget: "text"}
 
@@ -75,5 +75,5 @@ collections:
           - {label: "Site Description", name: "siteDescription", widget: "text"}
           - {label: "Contact Email", name: "contactEmail", widget: "string"}
           - {label: "Contact Phone", name: "contactPhone", widget: "string"}
-          - {label: "Footer Tagline", name: "footerTagline", widget: "string"}
+          - {label: "Footer Headline", name: "footerTagline", widget: "string"}
           - {label: "Footer Description", name: "footerDescription", widget: "text"}

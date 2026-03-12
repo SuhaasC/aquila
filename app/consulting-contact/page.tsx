@@ -8,8 +8,48 @@ import { Card } from "@/components/ui/card";
 import { Section } from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
 import { ArrowRight, Calendar, CheckCircle, Target, Shield, Clock, TrendingUp } from "lucide-react";
+import { useState } from "react";
 
 export default function ConsultingContact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitState(null);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch("/api/forms", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "Strategic Conversation",
+          data,
+        }),
+      });
+
+      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        throw new Error(result?.error || "Failed to send your request.");
+      }
+
+      e.currentTarget.reset();
+      setSubmitState({ type: "success", message: "Request sent. We'll reach out within 24 hours." });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      setSubmitState({ type: "error", message });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
@@ -34,7 +74,8 @@ export default function ConsultingContact() {
             
             <FadeIn delay={0.1}>
               <p className="mb-8 sm:mb-12 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed px-4">
-                Ready to transform your strategic thinking? Share your challenges and we'll arrange a focused consultation.
+                Ready to sharpen your decision clarity? Share your challenges and we will arrange a focused
+                strategic conversation.
               </p>
             </FadeIn>
           </div>
@@ -46,10 +87,10 @@ export default function ConsultingContact() {
             <FadeIn>
               <div className="text-center mb-12 sm:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-brand-navy mb-4 sm:mb-6">
-                  Strategic Consultation
+                  Strategic Conversation
                 </h2>
                 <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-                  Tell us about your strategic challenges and we'll arrange a private conversation to explore solutions.
+                  Tell us about your strategic challenges and we will arrange a private strategic conversation.
                 </p>
               </div>
             </FadeIn>
@@ -58,7 +99,11 @@ export default function ConsultingContact() {
               {/* Left Side - Form */}
               <div className="lg:col-span-2">
                 <Card className="p-8 sm:p-12 bg-white border-slate-200 shadow-lg">
-                  <form className="space-y-6 sm:space-y-8">
+                  <form onSubmit={handleSubmit} className="relative space-y-6 sm:space-y-8">
+                    <div className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+                      <label htmlFor="website">Website</label>
+                      <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                    </div>
                     {/* Basic Information */}
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
@@ -209,11 +254,21 @@ export default function ConsultingContact() {
                     <div className="pt-4">
                       <Button 
                         type="submit"
+                        disabled={isSubmitting}
                         className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                       >
-                        Schedule Strategic Consultation
+                        {isSubmitting ? "Sending..." : "Request Strategic Conversation"}
                         <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
+                      {submitState && (
+                        <p
+                          className={`mt-3 text-sm ${
+                            submitState.type === "success" ? "text-green-600" : "text-red-600"
+                          }`}
+                        >
+                          {submitState.message}
+                        </p>
+                      )}
                     </div>
                   </form>
                 </Card>
@@ -230,7 +285,7 @@ export default function ConsultingContact() {
                   <div className="space-y-3 text-sm text-slate-700">
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-brand-gold mt-0.5 flex-shrink-0" />
-                      <span>90-minute focused consultation</span>
+                      <span>90-minute focused strategic conversation</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-brand-gold mt-0.5 flex-shrink-0" />
@@ -249,27 +304,27 @@ export default function ConsultingContact() {
 
                 {/* Our Services */}
                 <Card className="p-6 sm:p-8 bg-white border-slate-200">
-                  <h3 className="text-lg font-semibold text-brand-navy mb-4 text-center">Our Services</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-brand-navy mb-4 text-center">Engagement Focus</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                       <Target className="w-8 h-8 text-brand-navy flex-shrink-0" />
                       <div>
-                        <h4 className="font-medium text-brand-navy">Strategic Diagnostic</h4>
-                        <p className="text-sm text-slate-600">90-minute session</p>
+                        <h4 className="text-xs sm:text-sm leading-snug font-medium text-brand-navy">Strategic Diagnosis</h4>
+                        <p className="text-sm text-slate-600">Root constraint clarity</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                       <TrendingUp className="w-8 h-8 text-brand-gold flex-shrink-0" />
                       <div>
-                        <h4 className="font-medium text-brand-navy">Growth Architecture</h4>
-                        <p className="text-sm text-slate-600">6-8 week intensive</p>
+                        <h4 className="text-xs sm:text-sm leading-snug font-medium text-brand-navy">Decision Framing</h4>
+                        <p className="text-sm text-slate-600">Trade offs made explicit</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
                       <Shield className="w-8 h-8 text-green-600 flex-shrink-0" />
                       <div>
-                        <h4 className="font-medium text-brand-navy">Strategic Partner</h4>
-                        <p className="text-sm text-slate-600">Ongoing partnership</p>
+                        <h4 className="text-xs sm:text-sm leading-snug font-medium text-brand-navy">Strategic Calibration</h4>
+                        <p className="text-sm text-slate-600">Founder-priority alignment</p>
                       </div>
                     </div>
                   </div>
@@ -280,7 +335,7 @@ export default function ConsultingContact() {
                   <div className="text-center">
                     <Clock className="w-12 h-12 text-brand-gold mx-auto mb-4" />
                     <h3 className="text-lg font-semibold text-brand-navy mb-2">Response Time</h3>
-                    <p className="text-sm text-slate-600">We'll respond within 24 hours to schedule your consultation.</p>
+                    <p className="text-sm text-slate-600">We will respond within 24 hours to continue the conversation.</p>
                   </div>
                 </Card>
               </div>

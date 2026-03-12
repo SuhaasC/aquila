@@ -15,11 +15,11 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquilastrat - Strategic Partners for Leaders Who Move Markets</title>
-    <meta name="description" content="Strategic consulting and data management services for founders and executives. Understated strategy that delivers results.">
+    <title>Aquilastrat - Strategic Clarity for Founders</title>
+    <meta name="description" content="Executive decision retainer and data management services for founders navigating complex decisions.">
     
     <!-- Redirect to main application -->
-    <meta http-equiv="refresh" content="0; url=/app/page" />
+    <meta http-equiv="refresh" content="0; url=/" />
     
     <!-- Fallback content -->
     <style>
@@ -40,9 +40,9 @@ header('Content-Type: text/html; charset=utf-8');
 <body>
     <div class="container">
         <div class="logo">Aquilastrat</div>
-        <div class="tagline">Strategic Partners for Leaders Who Move Markets</div>
+        <div class="tagline">Strategic Clarity for Founders Navigating Complex Decisions</div>
         <div class="loading">Loading your website...</div>
-        <p>If you're not redirected automatically, <a href="/app/page" style="color: #D4AF37;">click here</a></p>
+        <p>If you're not redirected automatically, <a href="/" style="color: #D4AF37;">click here</a></p>
     </div>
 </body>
 </html>

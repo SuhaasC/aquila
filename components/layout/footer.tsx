@@ -2,15 +2,10 @@ import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Ways to Work Together", href: "/#services-section" },
+  { name: "Decision Retainer", href: "/#services-section" },
   { name: "Data Management", href: "/data-management" },
   { name: "Insights", href: "/blog" },
   { name: "Contact", href: "/contact" },
-];
-
-const smallprint = [
-  { name: "Privacy", href: "/privacy" },
-  { name: "Terms", href: "/terms" },
 ];
 
 const social = [
@@ -39,10 +34,10 @@ export function Footer() {
             </div>
             <div className="space-y-4">
               <h2 className="text-xl font-serif text-brand-gold font-semibold leading-relaxed">
-                Strategic Partners for Leaders Who Move Markets
+                Strategic Clarity for Founders Navigating Complex Decisions
               </h2>
               <p className="text-white/80 leading-relaxed max-w-md text-sm">
-                We work with a small number of founders and executives to isolate the problems that matter, and act on them with precision.
+                We work with a small number of founders to isolate the constraints that actually determine progress and frame the decisions that matter most.
               </p>
             </div>
           </div>
@@ -77,28 +72,14 @@ export function Footer() {
               <li>
                 <Link href="/#services-section" className="text-white/80 hover:text-brand-gold transition-all duration-300 text-sm md:text-base font-medium group">
                   <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                    Strategic Diagnostic
+                    Retainer
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/#services-section" className="text-white/80 hover:text-brand-gold transition-all duration-300 text-sm md:text-base font-medium group">
-                  <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                    Growth Architecture
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services-section" className="text-white/80 hover:text-brand-gold transition-all duration-300 text-sm md:text-base font-medium group">
+                <Link href="/data-management" className="text-white/80 hover:text-brand-gold transition-all duration-300 text-sm md:text-base font-medium group">
                   <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
                     Data Management
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/#services-section" className="text-white/80 hover:text-brand-gold transition-all duration-300 text-sm md:text-base font-medium group">
-                  <span className="group-hover:translate-x-1 inline-block transition-transform duration-300">
-                    Strategic Partner
                   </span>
                 </Link>
               </li>
@@ -148,7 +129,7 @@ export function Footer() {
             </div>
             <div className="flex items-center space-x-6">
               <div className="w-2 h-2 bg-brand-gold rounded-full"></div>
-              <span className="text-sm text-white/60">Understated strategy for founders</span>
+              <span className="text-sm text-white/60">External decision intelligence for founders</span>
               <div className="w-2 h-2 bg-brand-gold rounded-full"></div>
             </div>
           </div>

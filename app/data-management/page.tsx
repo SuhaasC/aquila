@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Section } from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
-import { ArrowRight, Calendar, CheckCircle, Shield, Zap, TrendingUp, BarChart3, Database, Clock, AlertTriangle, Target } from "lucide-react";
+import { Calendar, CheckCircle, Shield, Zap, TrendingUp, BarChart3, Database, Clock, AlertTriangle, Target } from "lucide-react";
 import Image from "next/image";
 
 export default function DataManagement() {
@@ -78,15 +78,6 @@ export default function DataManagement() {
                 >
                   Schedule a Private Consultation
                   <Calendar className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 transition-transform duration-300 group-hover:scale-110" />
-                </Button>
-                
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-brand-navy px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 transform"
-                >
-                  Talk to an Expert
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
               </div>
             </FadeIn>

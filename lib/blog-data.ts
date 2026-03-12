@@ -465,7 +465,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>Remember, scaling is a journey, not a destination. Stay flexible, monitor your progress, and be prepared to adjust your strategy as needed. The key is to scale at the right pace for your business, ensuring that growth doesn't compromise the quality of your product or service.</p>
       
-      <p>Need help evaluating your startup's readiness to scale? Our strategic consulting services can help you assess your current position and create a roadmap for sustainable growth. Contact us today to start your scaling journey!</p>
+      <p>Need help evaluating your startup's readiness to scale? Our executive decision retainer helps founders assess current constraints and frame the next decisions for sustainable growth.</p>
     `
   }
 ];

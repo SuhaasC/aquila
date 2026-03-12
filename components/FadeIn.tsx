@@ -18,22 +18,18 @@ export default function FadeIn({
 
   const variants = {
     fade: {
-      initial: { opacity: 0, y: 24 },
       animate: { opacity: 1, y: 0 },
       transition: { duration, ease: premiumEase, delay }
     },
     slide: {
-      initial: { opacity: 0, x: -24 },
       animate: { opacity: 1, x: 0 },
       transition: { duration, ease: premiumEase, delay }
     },
     scale: {
-      initial: { opacity: 0, scale: 0.95 },
       animate: { opacity: 1, scale: 1 },
       transition: { duration, ease: premiumEase, delay }
     },
     'slide-up': {
-      initial: { opacity: 0, y: 48 },
       animate: { opacity: 1, y: 0 },
       transition: { duration, ease: premiumEase, delay }
     }
@@ -41,7 +37,7 @@ export default function FadeIn({
 
   return (
     <motion.div 
-      initial={variants[variant].initial}
+      initial={false}
       animate={variants[variant].animate}
       transition={variants[variant].transition}
       whileInView={{ opacity: 1, y: 0 }}

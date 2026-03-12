@@ -103,7 +103,7 @@ export default function Blog() {
                     Featured Insight
                   </h2>
                   <p className="text-text/60 max-w-2xl mx-auto">
-                    Our most popular strategic framework, trusted by hundreds of founders
+                    A practical framework for founders navigating complex decisions
                   </p>
                 </div>
 
@@ -260,4 +260,3 @@ export default function Blog() {
     </div>
   );
 }
-

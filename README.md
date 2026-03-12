@@ -1,6 +1,6 @@
-# Aquilastrat - Strategic Consulting Website
+# Aquilastrat Website
 
-A clean, modern website for strategic consulting services, built with Next.js and TypeScript.
+A clean, modern website for executive decision retainer and data management services, built with Next.js and TypeScript.
 
 ## 🚀 Features
 
@@ -49,6 +49,15 @@ npm run build
 # Deploy to Vercel
 npx vercel --prod
 ```
+
+### Form Email Configuration
+Form submissions from `/contact`, `/consulting-contact`, and `/data-contact` are sent via SMTP through `POST /api/forms`.
+
+1. Copy `.env.example` to `.env.local`
+2. Fill in your SMTP credentials
+3. Set `FORMS_TO_EMAIL=contact@aquilastrat.com` (or change if needed)
+4. Optionally set `FORMS_ALLOWED_ORIGINS` for stricter origin checks
+5. (Optional) set `NEXT_PUBLIC_GA_MEASUREMENT_ID` to enable analytics
 
 ## 📝 Adding Blog Posts
 

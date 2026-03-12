@@ -9,8 +9,48 @@ import { Section } from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
 import { ArrowRight, Calendar, CheckCircle, Shield, Zap, TrendingUp } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function DataContact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitState(null);
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = Object.fromEntries(formData.entries());
+
+      const response = await fetch("/api/forms", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "Data Management Consultation",
+          data,
+        }),
+      });
+
+      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        throw new Error(result?.error || "Failed to send your request.");
+      }
+
+      e.currentTarget.reset();
+      setSubmitState({ type: "success", message: "Request sent. We'll reach out within 24 hours." });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      setSubmitState({ type: "error", message });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
@@ -68,7 +108,11 @@ export default function DataContact() {
               {/* Left Side - Form */}
               <div className="lg:col-span-2">
                 <Card className="p-8 sm:p-12 bg-white border-slate-200 shadow-lg">
-                  <form className="space-y-6 sm:space-y-8">
+                  <form onSubmit={handleSubmit} className="relative space-y-6 sm:space-y-8">
+                    <div className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+                      <label htmlFor="website">Website</label>
+                      <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+                    </div>
                     {/* Basic Information */}
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
@@ -213,11 +257,21 @@ export default function DataContact() {
                     <div className="pt-4">
                       <Button 
                         type="submit"
+                        disabled={isSubmitting}
                         className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                       >
-                        Schedule Data Consultation
+                        {isSubmitting ? "Sending..." : "Schedule Data Consultation"}
                         <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
+                      {submitState && (
+                        <p
+                          className={`mt-3 text-sm ${
+                            submitState.type === "success" ? "text-green-600" : "text-red-600"
+                          }`}
+                        >
+                          {submitState.message}
+                        </p>
+                      )}
                     </div>
                   </form>
                 </Card>

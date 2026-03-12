@@ -1,56 +1,54 @@
 ---
-heroTitle: "Data Management Solutions"
-heroDescription: "Transform your data infrastructure into a strategic asset that drives better decision-making and operational efficiency."
+heroTitle: "Data Management for Regulatory and Operational Clarity"
+heroDescription: "Transform fragmented inputs into trusted, audit-ready outputs across regulatory reporting, market data, and claims workflows."
 section1Title: "Regulatory Data Command Centre"
 section1Content: |
-  ## Centralized Compliance Management
+  ## First-mile chaos to audit-ready reporting
 
-  Our Regulatory Data Command Centre provides a unified platform for managing all compliance requirements across your organization.
+  We design data workflows that turn inconsistent partner and broker files into validated, traceable submissions.
 
-  ### Key Features:
-  - **Real-time Monitoring**: Track regulatory changes and compliance status
-  - **Automated Reporting**: Generate compliance reports automatically
-  - **Audit Trail**: Maintain complete records for regulatory audits
-  - **Risk Assessment**: Identify and mitigate compliance risks
+  ### Core Capabilities:
+  - **Multi-format Ingestion**: EDI, CSV, and other structured inputs
+  - **Validation Controls**: Rule-based checks before reporting
+  - **Lineage Visibility**: Clear source-to-output traceability
+  - **Compliance Readiness**: Reporting aligned to regulatory requirements
 
-  ### Benefits:
-  - Reduce compliance costs by 40%
-  - Eliminate manual reporting errors
-  - Improve audit readiness
-  - Streamline regulatory workflows
+  ### Business Outcome:
+  - Faster reporting cycles
+  - Fewer reconciliation bottlenecks
+  - Stronger confidence for audits and oversight
 
-section2Title: "Claims Process Optimization"
+section2Title: "Market & Risk Data Integration Layer"
 section2Content: |
-  ## Streamlined Claims Processing
+  ## Centralized integration for better decision speed
 
-  Optimize your claims processing workflow to reduce costs, improve accuracy, and enhance customer satisfaction.
+  We unify fragmented market and risk feeds into one integration layer so teams operate from consistent data.
 
-  ### Process Improvements:
-  - **Automated Validation**: Reduce manual review time by 60%
-  - **Smart Routing**: Route claims to the right team members automatically
-  - **Fraud Detection**: Identify suspicious claims with AI-powered analysis
-  - **Customer Portal**: Provide real-time status updates to customers
+  ### Core Capabilities:
+  - **Unified Feed Architecture**: One integration approach across vendors
+  - **Automated Reconciliation**: Exception handling built into the workflow
+  - **Operational Controls**: Data quality checks at key handoff points
+  - **Decision-ready Outputs**: Trusted data for analytics and risk visibility
 
-  ### Results:
-  - 50% faster claims processing
-  - 30% reduction in processing costs
-  - 95% customer satisfaction rate
-  - Improved fraud detection accuracy
+  ### Business Outcome:
+  - Reduced manual intervention
+  - Fewer downstream breaks
+  - Improved speed and consistency in execution
 
-section3Title: "Data Integration & Analytics"
+section3Title: "Claims Process Optimisation"
 section3Content: |
-  ## Seamless Data Integration
+  ## Better claims flow without rebuilding your stack
 
-  Connect all your data sources into a unified analytics platform that provides actionable insights.
+  We streamline intake, routing, and triage workflows while fitting into your existing claims environment.
 
-  ### Integration Capabilities:
-  - **Multi-source Connectivity**: Connect to any data source or system
-  - **Real-time Processing**: Process data as it's generated
-  - **Advanced Analytics**: Apply machine learning and predictive modeling
-  - **Custom Dashboards**: Create tailored views for different stakeholders
+  ### Core Capabilities:
+  - **Structured Intake**: Standardized claim capture across channels
+  - **Rules-based Routing**: Priority logic for faster assignment
+  - **Status Visibility**: Clear tracking across teams and handoffs
+  - **Process Controls**: Reduced leakage from manual inconsistencies
 
-  ### Analytics Features:
-  - Predictive modeling for business outcomes
-  - Real-time performance monitoring
-  - Custom KPI tracking and reporting
-  - Automated alerting and notifications
+  ### Business Outcome:
+  - Shorter claims cycles
+  - Better operational throughput
+  - Stronger confidence in process quality
+---

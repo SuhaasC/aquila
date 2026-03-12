@@ -15,8 +15,6 @@ import {
   Send,
   Clock,
   MapPin,
-  Calendar,
-  CheckCircle,
   Database,
   Zap,
   TrendingUp,
@@ -32,13 +30,50 @@ export default function Contact() {
     email: '',
     company: '',
     phone: '',
-    message: ''
+    message: '',
+    website: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    // Form data is available in formData state
+    setIsSubmitting(true);
+    setSubmitState(null);
+
+    try {
+      const response = await fetch("/api/forms", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "General Contact",
+          data: formData,
+        }),
+      });
+
+      const result = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        throw new Error(result?.error || "Failed to send your message.");
+      }
+
+      setSubmitState({ type: "success", message: "Message sent successfully. We'll get back to you soon." });
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        message: "",
+        website: "",
+      });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      setSubmitState({ type: "error", message });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -127,7 +162,19 @@ export default function Contact() {
               {/* Contact Form */}
               <FadeIn delay={0.1}>
                 <Card className="p-8 sm:p-12 bg-white border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-300">
-                  <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
+                  <form onSubmit={handleSubmit} className="relative space-y-6 sm:space-y-8">
+                    <div className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+                      <label htmlFor="website">Website</label>
+                      <Input
+                        id="website"
+                        name="website"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.website}
+                        onChange={handleChange}
+                      />
+                    </div>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-3">
@@ -214,11 +261,21 @@ export default function Contact() {
                     <Button 
                       type="submit" 
                       size="lg"
+                      disabled={isSubmitting}
                       className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                     >
                       <Send className="w-5 h-5 mr-3" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
+                    {submitState && (
+                      <p
+                        className={`text-sm ${
+                          submitState.type === "success" ? "text-green-600" : "text-red-600"
+                        }`}
+                      >
+                        {submitState.message}
+                      </p>
+                    )}
                   </form>
                 </Card>
               </FadeIn>
@@ -298,10 +355,11 @@ export default function Contact() {
             <FadeIn>
               <div className="text-center mb-12 sm:mb-16">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-brand-navy mb-4 sm:mb-6 tracking-tight leading-relaxed">
-                  Strategic Consulting?
+                  Executive Decision Retainer
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                  For strategic clarity, growth acceleration, or ongoing partnership, we have a dedicated consultation process.
+                  Aquilastrat operates as an external decision intelligence layer for founders navigating complex
+                  strategic choices.
                 </p>
               </div>
             </FadeIn>
@@ -314,8 +372,10 @@ export default function Contact() {
                       <Target className="w-6 h-6 text-brand-navy" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Strategic Diagnostic</h4>
-                      <p className="text-slate-700">90-minute focused session</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">Strategic Diagnosis</h4>
+                      <p className="text-slate-700">
+                        Identify the underlying constraint behind growth stalls, operational friction, or conflicting initiatives.
+                      </p>
                     </div>
                   </div>
                   
@@ -324,8 +384,10 @@ export default function Contact() {
                       <TrendingUp className="w-6 h-6 text-brand-gold" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Growth Architecture</h4>
-                      <p className="text-slate-700">6-8 week intensive</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">Decision Framing</h4>
+                      <p className="text-slate-700">
+                        Structure complex decisions so trade offs and second order effects become visible.
+                      </p>
                     </div>
                   </div>
                   
@@ -334,23 +396,26 @@ export default function Contact() {
                       <Shield className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-brand-navy mb-1">Strategic Partner</h4>
-                      <p className="text-slate-700">Ongoing partnership</p>
+                      <h4 className="font-semibold text-brand-navy mb-1">Strategic Calibration</h4>
+                      <p className="text-slate-700">
+                        Ensure teams, agencies, and initiatives stay aligned with founder priorities.
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div className="text-center">
                   <Card className="p-8 bg-brand-navy/5 border-brand-navy/10">
-                    <h3 className="text-xl font-semibold text-brand-navy mb-4">Strategic Consultation</h3>
+                    <h3 className="text-xl font-semibold text-brand-navy mb-4">Strategic Conversation</h3>
                     <p className="text-slate-600 mb-6">
-                      Get a focused consultation on your strategic challenges with our specialized team.
+                      If you're navigating high-stakes choices and want sharper perspective before committing resources,
+                      start with a strategic conversation.
                     </p>
                     <Button 
                       className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white"
                       onClick={() => window.location.href = '/consulting-contact'}
                     >
-                      Schedule Strategic Consultation
+                      Request a Strategic Conversation
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Card>
@@ -369,7 +434,8 @@ export default function Contact() {
                   Data Management Challenges?
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                  For regulatory compliance, market data integration, or claims process optimization, we have a dedicated consultation process.
+                  For regulatory compliance, market data integration, or claims process optimization, we use a dedicated
+                  data engagement process.
                 </p>
               </div>
             </FadeIn>
@@ -412,7 +478,7 @@ export default function Contact() {
                   <Card className="p-8 bg-brand-navy/5 border-brand-navy/10">
                     <h3 className="text-xl font-semibold text-brand-navy mb-4">Data-Specific Consultation</h3>
                     <p className="text-slate-600 mb-6">
-                      Get a focused consultation on your data challenges with our specialized team.
+                      Get focused clarity on your data challenges with our specialized team.
                     </p>
                     <Button 
                       className="w-full bg-brand-navy hover:bg-brand-navy/90 text-white"
@@ -435,4 +501,3 @@ export default function Contact() {
     </div>
   );
 }
-
